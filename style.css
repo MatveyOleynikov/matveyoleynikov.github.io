@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;  
+}
+
+body{
+    background-color: #6D5A6D;
+    margin: 0;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    /* justify-content: right; */
+    width: 100%;
+    background-color: #7B2876;
+    height: 50px;
+}
+
+.navigation{
+    display: flex;
+    font-size: 18pt;
+}
+
+.main-menu{
+    position: absolute;
+    margin: 0;
+    top: 5px; 
+    right: 10px;
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+a {
+    font-family: 'Oswald', sans-serif;
+    color: white; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+a:visited {
+    color: white; /* Цвет посещенной ссылки */ 
+} 
+
+a:hover {
+    color: white; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline;
+}
+
+.main-information{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.main-information-header{
+    text-align: center;
+}
+
+.main-information-content{
+    padding: 5px 5% 0% 5%;
+}
