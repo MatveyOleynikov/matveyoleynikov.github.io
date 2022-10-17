@@ -108,3 +108,135 @@ body{
 .icon a:hover{
     text-decoration: none;
 }
+
+.main-information-content{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
+.subscription-content{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
+.custom-card {
+    float: right;
+    margin-right: 22px;
+    position: relative;
+    width: 559px;
+    height: 272px;
+    background: url(images/view-card.png) no-repeat;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+}
+
+.custom-card__payment-system-icons{
+    padding-top: 20px;
+}
+
+.custom-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.custom-icon_name_maestro {
+    width: 33px;
+    height: 26px;
+    background: url(images/maestro.svg) no-repeat;
+}
+
+.custom-icon_name_mir {
+    width: 33px;
+    height: 26px;
+    background: url(images/mir.svg) no-repeat;
+}
+
+.custom-icon_name_mastercard {
+    width: 33px;
+    height: 26px;
+    background: url(images/mastercard.svg) no-repeat;
+}
+
+.custom-icon_name_visa {
+    width: 33px;
+    height: 26px;
+    background: url(images/visa.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.custom-select__select {
+    appearance: none;
+    /*display: none;*/
+}
+
+.custom-select__button_theme_dark {
+    width: 323px;
+    border: 1px solid #414141;
+    background: url(images/list.png) center right no-repeat #191919;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: inherit;
+}
+
+.custom-select__button_theme_dark, .custom-select__dropdown-item_theme_dark {
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    height: 42px;
+    line-height: 42px;
+    line-height: 2.625rem;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #999;
+    text-align: left;
+}
+
+.custom-control__label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.custom-card__payment-system-icon_name_mir {
+    right: 150px;
+}
+
+.custom-card__payment-system-icon_name_maestro {
+    right: 193px;
+}
+
+.custom-card__payment-system-icon_name_mastercard {
+    right: 236px;
+}
+
+.custom-card__payment-system-icon_name_visa {
+    right: 280px;
+}
+
+.custom-card__payment-system-icon {
+    transition: opacity .3s ease-in-out,right .3s ease-in-out;
+    position: absolute;
+}
+
+.custom-card__number {
+    margin-left: 20px;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: .43px;
+}
