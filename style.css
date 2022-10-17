@@ -240,3 +240,45 @@ body{
     font-size: 1.0625rem;
     letter-spacing: .43px;
 }
+
+.custom-card__date {
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: .43px;
+    float: left;
+}
+
+.custom-control__label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.custom-control__control {
+    box-sizing: border-box;
+    height: 45px;
+    width: 60px;
+    background: #171717;
+    border: 1px solid #454545;
+    border-radius: 2px;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    text-align: center;
+    outline: none;
+}
+
+.custom-card__cvc {
+    margin-top: 23px;
+    color: #999;
+    margin-left: 450px;
+}
