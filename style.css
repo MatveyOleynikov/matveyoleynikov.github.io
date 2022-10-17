@@ -24,10 +24,27 @@ body{
     font-size: 18pt;
 }
 
+#circle {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #D9D9D9;
+    float: left;
+}
+
+.logo{
+    margin-top: 5px; 
+    margin-left: 55px;
+    color:#D4D4D4;
+}
+
 .main-menu{
     position: absolute;
     margin: 0;
-    top: 5px; 
+    top: 10px; 
     right: 10px;
     gap: 1rem;
     display: flex;
@@ -35,18 +52,18 @@ body{
     flex-direction: row;
 }
 
-a {
+.header a {
     font-family: 'Oswald', sans-serif;
-    color: white; /* Цвет обычной ссылки */ 
+    color: #D5D5D5;
     text-decoration: none; /* Убираем подчеркивание у ссылок */
 }
 
-a:visited {
-    color: white; /* Цвет посещенной ссылки */ 
+.header a:visited {
+    color: #D5D5D5;
 } 
 
-a:hover {
-    color: white; /* Цвет ссылки при наведении на нее курсора мыши */
+.header a:hover {
+    color: #D5D5D5;
     text-decoration: underline;
 }
 
@@ -86,4 +103,8 @@ a:hover {
 .login-block a:hover {
     color: black; /* Цвет ссылки при наведении на нее курсора мыши */
     text-decoration: underline;
+}
+
+.icon a:hover{
+    text-decoration: none;
 }
