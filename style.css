@@ -137,6 +137,20 @@ body{
     color: #380D0D;
 }
 
+.main-information-trains{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
 .subscription-content{
     font-family: 'Inter';
     font-style: normal;
@@ -317,4 +331,19 @@ body{
     color: white;
     background: #7A2977;
     border-radius: 5px;
+}
+
+.block-train {
+    height: 100px;
+    width: 33.333%; /* Можно задать любую другую ширину блока */
+    background: grey;
+    margin: .5rem;
+  }
+  
+.tasks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
 }
