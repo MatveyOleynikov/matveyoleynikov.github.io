@@ -402,3 +402,8 @@ body{
     font-style: normal;
     font-size: 20px;
 }
+
+.main-information-trains{
+    min-width: 850px;
+    max-width: 850px;
+}
