@@ -7,25 +7,27 @@ export const User = sequelize.define('users', {
 
         type : DataTypes.INTEGER,
         allowNull : false,
-        field: 'user_id'
+        field: 'user_id',
+        autoIncrement: true,
+        primaryKey: true
     },
 
     name: {
         
-        type : DataTypes.STRING,
+        type : DataTypes.STRING(30),
         allowNull : false,
         field : 'name'
     },
 
     email: {
 
-        type : DataTypes.STRING,
+        type : DataTypes.STRING(80),
         allowNull : false,
         field : 'email'
     },
 
     password: {
-        type : DataTypes.STRING,
+        type : DataTypes.STRING(30),
         allowNull : false,
         field: 'password',
         set(value) {
