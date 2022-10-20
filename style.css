@@ -108,3 +108,302 @@ body{
 .icon a:hover{
     text-decoration: none;
 }
+
+.main-information-index{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
+.main-information-content{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
+.main-information-trains{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
+.subscription-content{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #380D0D;
+}
+
+.custom-card {
+    float: left;
+    margin-right: 22px;
+    position: relative;
+    width: 559px;
+    height: 272px;
+    background: url(images/view-card.png) no-repeat;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+}
+
+.custom-card__payment-system-icons{
+    padding-top: 20px;
+}
+
+.custom-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.custom-icon_name_maestro {
+    width: 33px;
+    height: 26px;
+    background: url(images/maestro.svg) no-repeat;
+}
+
+.custom-icon_name_mir {
+    width: 33px;
+    height: 26px;
+    background: url(images/mir.svg) no-repeat;
+}
+
+.custom-icon_name_mastercard {
+    width: 33px;
+    height: 26px;
+    background: url(images/mastercard.svg) no-repeat;
+}
+
+.custom-icon_name_visa {
+    width: 33px;
+    height: 26px;
+    background: url(images/visa.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.custom-select__select {
+    appearance: none;
+    /*display: none;*/
+}
+
+.custom-select__button_theme_dark {
+    width: 323px;
+    border: 1px solid #414141;
+    background: url(images/list.png) center right no-repeat #191919;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: inherit;
+}
+
+.custom-select__button_theme_dark, .custom-select__dropdown-item_theme_dark {
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    height: 42px;
+    line-height: 42px;
+    line-height: 2.625rem;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #999;
+    text-align: left;
+}
+
+.custom-control__label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.custom-card__payment-system-icon_name_mir {
+    right: 150px;
+}
+
+.custom-card__payment-system-icon_name_maestro {
+    right: 193px;
+}
+
+.custom-card__payment-system-icon_name_mastercard {
+    right: 236px;
+}
+
+.custom-card__payment-system-icon_name_visa {
+    right: 280px;
+}
+
+.custom-card__payment-system-icon {
+    transition: opacity .3s ease-in-out,right .3s ease-in-out;
+    position: absolute;
+}
+
+.custom-card__number {
+    margin-left: 20px;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: .43px;
+}
+
+.custom-card__date {
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    letter-spacing: .43px;
+    float: left;
+}
+
+.custom-control__label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.custom-control__control {
+    box-sizing: border-box;
+    height: 45px;
+    width: 60px;
+    background: #171717;
+    border: 1px solid #454545;
+    border-radius: 2px;
+    color: #999;
+    font-family: WarheliosCondC,Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    text-align: center;
+    outline: none;
+}
+
+.custom-card__cvc {
+    margin-top: 23px;
+    color: #999;
+    margin-left: 450px;
+}
+
+.main-information-content{
+    height: 450px;
+    min-width: 800px;
+}
+
+.Pay{
+    float: right;
+    width: 220px;
+    height: 30px;
+    margin-top: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    background: #7A2977;
+    border-radius: 5px;
+}
+
+.block-train {
+    height: 300px;
+    width: 33.333%; /* Можно задать любую другую ширину блока */
+    background: #2780B1;
+    margin: .5rem;
+    border-radius: 10px;
+  }
+  
+.tasks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.task-image{
+    float: left;
+    margin-top: 25px; /* если сделать паддинг, то будет угар*/
+    margin-left: 25px;
+    width: 65%;
+    height: 65%;
+    border-radius: 30px;
+}
+
+.information-button{
+    background: #641B70;
+    float: right;
+    margin-right: 8px;
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.plus-button{
+    background: #641B70;
+    float: right;
+    margin-right: 8px;
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.pusk-button{
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-style: solid;
+    border-width: 22px 0 22px 37px;
+    border-color: #2780B1 #2780B1 #2780B1 #21C43B;
+
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.description-task{
+    margin-top: 75px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.main-information-trains{
+    min-width: 850px;
+    max-width: 850px;
+}
