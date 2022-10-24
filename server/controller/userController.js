@@ -5,7 +5,8 @@ class UserController{
     async registration(req, res){
         
         try{
-            const user = UserService.create(res.body);
+            console.log(req.body)
+            const user = await UserService.create(req.body);
             res.json(user)
         }
         catch(e){
@@ -16,7 +17,10 @@ class UserController{
     async getByNameAndPassword(req, res){
 
         try{
-            const user = UserService.getByNameAndPassword(res.body)
+            
+            const usr = {name : req.query.name, password: req.query.password};
+            console.log(usr);
+            const user = await UserService.getByNameAndPassword(usr)
             res.json(user)
         }
         catch(e){
