@@ -1,6 +1,7 @@
 const express = require('express')
 const Sequalize = require('sequelize')
 const userRouter = require('./router/userRouter')
+const cors = require('cors')
 
 
 const PORT = 4000
@@ -13,6 +14,7 @@ const app = express()
 // })
 
 app.use(express.json())
+app.use(cors())
 
 const startUp = () => {
 
