@@ -1,12 +1,25 @@
 const { Op } = require('sequelize')
 const db = require("../db");
+const EntityExistsError = require('../error/EntityExistsError');
 const NullError = require("../error/nullError");
 const User = db.User
 
 class UserService {
 
     async create(newUser) {
-        const { name, email, password } = newUser
+        const { name, email, password } = newUser;
+        
+        const usr = await this.getByEmail(email);
+        const usr2 = await this.getByName(name);
+        console.log(JSON.stringify(usr, null, 2))
+        if (usr != null){
+            throw new EntityExistsError("email is used another account");
+        }
+
+        if (usr2 != null){
+            throw new EntityExistsError("name is used another account");
+        }
+
         const registrationUser = await User.create({ name: name, email: email, password: password });
         return registrationUser;
     }
@@ -35,11 +48,11 @@ class UserService {
         return user;
     }
 
-    async getByLoginAndPassword(user) {
+    async getByNameAndPassword(user) {
         const { name, password } = user;
 
         if (name == null || password == null) {
-            throw new NullError("login or password is empty");
+            throw new NullError("name or password is empty");
         }
 
         const usr = await User.findOne({
@@ -50,21 +63,21 @@ class UserService {
         )
 
         if (usr == null) {
-            throw new NullError("login or password is not right");
+            throw new NullError("name or password is not right");
         }
 
         return usr;
     }
 
-    async getByLogin(login) {
+    async getByName(name) {
 
-        if (login == null) {
-            throw new NullError("login is null");
+        if (name == null) {
+            throw new NullError("name is null");
         }
 
         const usr = User.findOne({
             where: {
-                name: login
+                name: name
             }
         }
         )
@@ -75,7 +88,7 @@ class UserService {
     async getByEmail(email) {
 
         if (email == null) {
-            throw new NullError("login is null");
+            throw new NullError("name is null");
         }
 
         const usr = User.findOne({
@@ -89,4 +102,5 @@ class UserService {
     }
 }
 
-userService = new UserService();
+
+module.exports =  new UserService();
