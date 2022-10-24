@@ -1,7 +1,7 @@
-const sequelize = require('../connection')
-import { DataTypes } from 'sequelize'
+const DataTypes = require('sequelize')
 
-export const User = sequelize.define('users', {
+module.exports = (sequelize) => {
+return sequelize.define('users', {
     
     user_id: {
 
@@ -30,10 +30,7 @@ export const User = sequelize.define('users', {
         type : DataTypes.STRING(30),
         allowNull : false,
         field: 'password',
-        set(value) {
-            // Перед записью в БД пароли следует "хэшировать" с помощью криптографической функции
-            this.setDataValue('password', hash(value))
-        }
+       
     }
 
 },
@@ -42,4 +39,5 @@ export const User = sequelize.define('users', {
     timestamps: false,
 }
 
-);
+)
+};
