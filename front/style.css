@@ -407,3 +407,15 @@ body{
     min-width: 850px;
     max-width: 850px;
 }
+
+button{
+    background-color: #7B2876;
+}
+button:hover {
+    background: #180A8F;
+}
+
+button:active {
+    background: #006CBE;
+    
+}
