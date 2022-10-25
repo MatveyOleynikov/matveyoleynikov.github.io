@@ -12,6 +12,7 @@ const response = await fetch(url + "?" +  new URLSearchParams({
  if (response.status == 200){
     result = await response.json();
     console.log(result)
+    window.location.href = 'index.html';
     return;
  }
 
