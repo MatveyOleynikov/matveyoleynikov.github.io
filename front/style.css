@@ -151,6 +151,20 @@ body{
     color: #380D0D;
 }
 
+.main-information-tasks{
+    margin: 5px 15% 0% 15%;
+    border: 4px double #467AAC; /* Параметры границы */
+    background: #D9D9D9; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #380D0D;
+}
+
 .subscription-content{
     font-family: 'Inter';
     font-style: normal;
@@ -333,17 +347,39 @@ body{
     border-radius: 5px;
 }
 
-.block-train {
+.block-task {
+    flex: 32% 0 1;
     height: 300px;
-    width: 33.333%; /* Можно задать любую другую ширину блока */
+    width: 32%; /* Можно задать любую другую ширину блока */
     background: #2780B1;
-    margin: .5rem;
+    /*margin: .5rem; */
     border-radius: 10px;
-  }
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.block-train {
+    flex: 48% 0 1;
+    height: 300px;
+    width: 48%; /* Можно задать любую другую ширину блока */
+    background: #2780B1;
+    /*margin: .5rem; */
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
   
+.trains {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
 .tasks {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -385,17 +421,25 @@ body{
 .pusk-button{
     width: 0;
     height: 0;
-    margin-left: 8px;
     border-style: solid;
-    border-width: 22px 0 22px 37px;
+    border-width: 33px 0 33px 50px;
     border-color: #2780B1 #2780B1 #2780B1 #21C43B;
 
-    margin-left: 20px;
+    margin-left: 37px;
     margin-top: 15px;
 }
 
 .description-task{
-    margin-top: 75px;
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.description-train{
+    margin-top: 70px;
     text-align: center;
     color: white;
     font-family: 'Inter';
@@ -417,5 +461,41 @@ button:hover {
 
 button:active {
     background: #006CBE;
-    
+}
+
+.mysor-button{
+    height: 90px;
+    width: 90px;
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mysor-button:hover{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mysor-button:active{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.make-train{
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30%;
+}
+
+.block-train a {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.block-train a:visited {
+    color: white;
+} 
+
+.block-train a:hover {
+    color: white;
+    text-decoration: underline;
 }
