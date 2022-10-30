@@ -8,16 +8,16 @@ const response = await fetch(url + "?" +  new URLSearchParams({
     name : login,
     password: password
  }))
-
+ 
  if (response.status == 200){
+   
     result = await response.json();
     console.log(result)
+    localStorage.setItem('token', result)
     window.location.href = 'index.html';
-    return;
  }
 
  
-console.log(response.status);
 
 }
 

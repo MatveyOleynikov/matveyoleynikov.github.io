@@ -16,14 +16,16 @@ return sequelize.define('users', {
         
         type : DataTypes.STRING(30),
         allowNull : false,
-        field : 'name'
+        field : 'name',
+        unique: true
     },
 
     email: {
 
         type : DataTypes.STRING(80),
         allowNull : false,
-        field : 'email'
+        field : 'email',
+        unique: true
     },
 
     password: {

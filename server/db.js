@@ -3,7 +3,7 @@
 
 // import configDB from './configDB.js'
 const {DataTypes, Sequelize} = require('sequelize');
-const configDB = require('./configDB')
+const configDB = require('./config/configDB')
 
 const sequelize = new Sequelize(
     configDB.name,

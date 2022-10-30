@@ -25,8 +25,8 @@ const registration = async () => {
     if (response.status == 200){
     result = await response.json();
     console.log(result);
+    localStorage.setItem('token', result)
     window.location.href = 'index.html';
-    return;
     }
 
     console.log(response.status);
