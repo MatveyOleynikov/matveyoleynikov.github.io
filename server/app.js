@@ -18,10 +18,13 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const viewPath = path.join(__dirname, '..' , 'front')
+console.log(viewPath)
+
 const startUp = () => {
 
     app.use('/api', userRouter)
-    
+    app.use(express.static(viewPath))
     try {
 
         app.listen(PORT, () => console.log("SERVER START ON " + PORT + " PORT"));
@@ -34,9 +37,9 @@ const startUp = () => {
 
 startUp()
 
-app.get('/',authMiddlewaree, (req, res) =>{
-    console.log("ok")
-    // 
-    res.sendFile('E:\\3_course\\PIS\\1\\matveyoleynikov.github.io\\front\\subscription.html');
-}
+
+app.get('/subscription', authMiddlewaree , (req, res) =>{
+    console.log(__dirname)
+    res.sendFile(path.join(viewPath + '/subscription.html'));
+}   
 )
