@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const {secret} = require('../config/configJWT')
-const authMiddlewaree = (req, res) => {
+const authMiddlewaree = (req, res, next) => {
     if (req.method === "OPTIONS") {
         next();
     }
@@ -20,3 +20,5 @@ const authMiddlewaree = (req, res) => {
         return res.status(403).json({message : "Forbidden"})
     }
 }
+
+module.exports = authMiddlewaree;

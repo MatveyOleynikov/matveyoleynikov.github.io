@@ -2,6 +2,8 @@ const express = require('express')
 const Sequalize = require('sequelize')
 const userRouter = require('./router/userRouter')
 const cors = require('cors')
+const authMiddlewaree = require('../server/middlewaree/authMiddlewaree')
+const path = require('path');
 
 
 const PORT = 4000
@@ -31,3 +33,10 @@ const startUp = () => {
 }
 
 startUp()
+
+app.get('/',authMiddlewaree, (req, res) =>{
+    console.log("ok")
+    // 
+    res.sendFile('E:\\3_course\\PIS\\1\\matveyoleynikov.github.io\\front\\subscription.html');
+}
+)
