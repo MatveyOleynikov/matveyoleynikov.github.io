@@ -37,9 +37,13 @@ const startUp = () => {
 
 startUp()
 
+app.get('subscription.html', authMiddlewaree, (req, res) =>{
+    return res.status(401).end();
+}
+)
 
 app.get('/subscription', authMiddlewaree , (req, res) =>{
-    console.log(__dirname)
-    res.sendFile(path.join(viewPath + '/subscription.html'));
+    // console.log(__dirname)
+     res.sendFile(path.join(viewPath + '/subscription.html'));
 }   
 )
