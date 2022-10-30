@@ -1,5 +1,6 @@
-const urlX = 'http://localhost:4000/subscription'
-const subscription = document.querySelectorAll('.nav_block')[3]
+const urlSubscription = 'http://localhost:4000/subscription'
+const navBlockString = '.nav_block'
+const subscription = document.querySelectorAll(navBlockString)[3]
 console.log(subscription)
 
 subscription.onclick = async () => {
@@ -8,7 +9,7 @@ subscription.onclick = async () => {
     headers = { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
     console.log(headers)
     // debugger
-    response = await fetch(urlX, {
+    response = await fetch(urlSubscription, {
         headers: headers
     }
     )
@@ -23,4 +24,11 @@ subscription.onclick = async () => {
     
     const result = await resizeBy
     console.log(response)
+}
+
+if (document.querySelectorAll(navBlockString).length > 5){
+    const logout = document.querySelectorAll(navBlockString)[5]
+    logout.onclick = () => {
+        localStorage.setItem('token', null);
+    }
 }
