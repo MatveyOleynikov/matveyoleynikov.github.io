@@ -17,8 +17,6 @@ const response = await fetch(url + "?" +  new URLSearchParams({
     window.location.href = 'index.html';
  }
 
- 
-
 }
 
 const button = document.getElementById('enter-button');

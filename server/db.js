@@ -19,7 +19,7 @@ const Subscription = require('./model/subscription')(sequelize);
 const User = require("./model/user")(sequelize);
 const listsOfExercises = require('./model/lists_of_exercises')(sequelize);
 const Exercise = require('./model/exercise')(sequelize);
-
+const Train = require('./model/train')(sequelize);
 
 // связь списка упражнений с упражнениями
 listsOfExercises.hasMany(Exercise,
@@ -28,7 +28,10 @@ listsOfExercises.hasMany(Exercise,
     }
 )
 
-Exercise.belongsTo(listsOfExercises)
+Exercise.belongsTo(listsOfExercises,
+    {
+        foreignKey:'list_id'
+    })
 
 
 // Пользователь- подписка связь.
@@ -123,18 +126,62 @@ User.belongsToMany(Exercise, {through: UserExercise, foreignKey: 'user_id'})
 Exercise.belongsToMany(User, {through: UserExercise, foreignKey: 'exercise_id'})
 
 
+//связь пользователь-тренировка
+User.hasMany(Train, {foreignKey : 'user_id'});
+Train.belongsTo(User, {foreignKey : 'user_id'})
+
+// связь тренировка-упражнение
+const TrainExercise = sequelize.define('train_exercises',
+    {
+        train_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: Train, // или 'Movies'
+                key: 'train_id'
+            },
+            primaryKey: true
+        },
+
+        exercise_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: Exercise, // или 'Movies'
+                key: 'exercise_id'
+            },
+            primaryKey: true
+        },
+    },
+    {
+        timestamps: false
+    },
+
+    {
+        tableName: 'train_exercises',
+    },
+
+    {
+        freezeTableName: true,
+    }
+)
+
+Train.belongsToMany(Exercise, {through: TrainExercise, foreignKey: 'train_id'})
+Exercise.belongsToMany(Train, {through: TrainExercise, foreignKey: 'exercise_id'})
+
 // экспрорт  базы данных
 const db = {
     Subscription,
     User,
     listsOfExercises,
-    Exercise
+    Exercise,
+    Train
 }
 
 module.exports = db
 
 // const new_user =  User.create({name: 'user2', email: 'radnd@gmail.com', password: 'password'});
- //new_user.destroy();
+//new_user.destroy();
 // const subscription = Subscription.create({name:'usually', price : 299, time_interval: 30})
 // const now = new Date();
 // const subscription_user = SubscriptionUser.create({user_id: 2, subscription_id: 1, end_date: new Date()})
@@ -148,3 +195,28 @@ module.exports = db
 // } 
 // )
 
+// const train = Train.create({name: 'first', user_id : 1}).then(res => {
+//     console.log(res);
+// })
+
+Train.findAll(
+    {
+        include : [User, Exercise]
+    }
+).then(res => {
+    console.log(JSON.stringify(res, null, 2))
+})
+
+// Exercise.findAll().then(res => {
+//     console.log(JSON.stringify(res, null, 2))
+// })
+
+async function func(){
+    const train = await Train.findOne();
+    const exercise = await Exercise.findOne();
+   // exercise.name = 'fhksdgf'
+    // console.log(JSON.stringify(train, null, 2))
+    // console.log(JSON.stringify(exercise, null, 2))
+    //console.log(exercise) 
+     train.addExercise(exercise);   
+}
