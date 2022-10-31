@@ -30,7 +30,7 @@ CREATE TABLE `exercises` (
   PRIMARY KEY (`exercise_id`),
   KEY `list_id` (`list_id`),
   CONSTRAINT `exercises_ibfk_1` FOREIGN KEY (`list_id`) REFERENCES `lists_of_exercises` (`list_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `exercises` (
 
 LOCK TABLES `exercises` WRITE;
 /*!40000 ALTER TABLE `exercises` DISABLE KEYS */;
-INSERT INTO `exercises` VALUES (1,'техника','abcabc',1);
+INSERT INTO `exercises` VALUES (1,'техника','abcabc',1),(2,'техника','abcabc',1);
 /*!40000 ALTER TABLE `exercises` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,6 +123,60 @@ INSERT INTO `subscriptions_users` VALUES (1,1,'2022-10-23');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `train_exercises`
+--
+
+DROP TABLE IF EXISTS `train_exercises`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `train_exercises` (
+  `train_id` int NOT NULL,
+  `exercise_id` int NOT NULL,
+  PRIMARY KEY (`train_id`,`exercise_id`),
+  KEY `exercise_id` (`exercise_id`),
+  CONSTRAINT `train_exercises_ibfk_1` FOREIGN KEY (`train_id`) REFERENCES `trains` (`train_id`),
+  CONSTRAINT `train_exercises_ibfk_2` FOREIGN KEY (`exercise_id`) REFERENCES `exercises` (`exercise_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `train_exercises`
+--
+
+LOCK TABLES `train_exercises` WRITE;
+/*!40000 ALTER TABLE `train_exercises` DISABLE KEYS */;
+INSERT INTO `train_exercises` VALUES (1,1);
+/*!40000 ALTER TABLE `train_exercises` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trains`
+--
+
+DROP TABLE IF EXISTS `trains`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `trains` (
+  `train_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`train_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `trains_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trains`
+--
+
+LOCK TABLES `trains` WRITE;
+/*!40000 ALTER TABLE `trains` DISABLE KEYS */;
+INSERT INTO `trains` VALUES (1,'first',1);
+/*!40000 ALTER TABLE `trains` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -188,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-31  9:32:10
+-- Dump completed on 2022-10-31 22:46:01
