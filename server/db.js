@@ -199,24 +199,24 @@ module.exports = db
 //     console.log(res);
 // })
 
-Train.findAll(
-    {
-        include : [User, Exercise]
-    }
-).then(res => {
-    console.log(JSON.stringify(res, null, 2))
-})
-
-// Exercise.findAll().then(res => {
+// Train.findAll(
+//     {
+//         include : [User, Exercise]
+//     }
+// ).then(res => {
 //     console.log(JSON.stringify(res, null, 2))
 // })
 
-async function func(){
-    const train = await Train.findOne();
-    const exercise = await Exercise.findOne();
-   // exercise.name = 'fhksdgf'
-    // console.log(JSON.stringify(train, null, 2))
-    // console.log(JSON.stringify(exercise, null, 2))
-    //console.log(exercise) 
-     train.addExercise(exercise);   
-}
+// // Exercise.findAll().then(res => {
+// //     console.log(JSON.stringify(res, null, 2))
+// // })
+
+// async function func(){
+//     const train = await Train.findOne();
+//     const exercise = await Exercise.findOne();
+//    // exercise.name = 'fhksdgf'
+//     // console.log(JSON.stringify(train, null, 2))
+//     // console.log(JSON.stringify(exercise, null, 2))
+//     //console.log(exercise) 
+//      train.addExercise(exercise);   
+// }

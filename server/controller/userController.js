@@ -1,6 +1,7 @@
 const UserService = require('../service/userService')
 const jwt = require('jsonwebtoken')
 const {secret} = require('../config/configJWT')
+const NullError = require('../error/nullError')
 
 generateJWT = (userId, name, email) => {
 
@@ -43,6 +44,17 @@ class UserController{
         }
         catch(e){
             res.status(404).json(e.message);
+        }
+    }
+
+    async getUser(req, res){
+    
+        const user = req.user
+        if (!user){
+            res.status(403).json("forbidden");
+        }
+        else {
+            res.json(user)
         }
     }
 }
