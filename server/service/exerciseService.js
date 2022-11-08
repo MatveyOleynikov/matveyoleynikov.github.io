@@ -1,4 +1,4 @@
-const { Op } = require('sequelize')
+/*const { Op } = require('sequelize')
 const db = require("../db");
 const EntityExistsError = require('../error/EntityExistsError');
 const NullError = require("../error/nullError");
@@ -16,4 +16,4 @@ class ExerciseService {
 const x = new ExerciseService();
 x.getAllExercises();
 
-module.exports =  new ExerciseService();
+module.exports =  new ExerciseService();*/
