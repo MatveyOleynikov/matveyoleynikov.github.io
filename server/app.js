@@ -1,6 +1,7 @@
 const express = require('express')
 const Sequalize = require('sequelize')
 const userRouter = require('./router/userRouter')
+const exerciseRouter = require('./router/exerciseRouter')
 const cors = require('cors')
 const authMiddlewaree = require('../server/middlewaree/authMiddlewaree')
 const path = require('path');
@@ -22,7 +23,7 @@ const viewPath = path.join(__dirname, '..' , 'front')
 console.log(viewPath)
 
 const startUp = () => {
-
+    app.use('/api', exerciseRouter)
     app.use('/api', userRouter)
     app.use(express.static(viewPath))
     try {

@@ -1,4 +1,4 @@
-/*const exerciseService = require('../service/exerciseService')
+const exerciseService = require('../service/exerciseService')
 const NullError = require('../error/nullError')
 
 class ExerciseController{
@@ -14,4 +14,4 @@ class ExerciseController{
     }
 }
 
-module.exports = new ExerciseController();*/
+module.exports = new ExerciseController();
