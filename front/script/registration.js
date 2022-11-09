@@ -1,9 +1,18 @@
+
+// const validator = require('validator')
 const url = 'http://localhost:4000/api/users'
 
 const registration = async () => {
     const login =  document.getElementById('login-input').value;
     const password = document.getElementById('password-input').value;
     const email = document.getElementById('email-input').value;
+
+
+    //проверка
+    // if (validator.isEmail(email) == false){
+    //     alert("Email is not valid");
+    //     return;
+    // }
 
     console.log(login + " " + password + " " + email);
 
