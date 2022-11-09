@@ -349,13 +349,15 @@ body{
 
 .block-task {
     flex: 32% 0 1;
+    margin-right: 1.325%;
     height: 300px;
-    width: 32%; /* Можно задать любую другую ширину блока */
+    /*width: 32%; /* Можно задать любую другую ширину блока */
     background: #2780B1;
     /*margin: .5rem; */
     border-radius: 10px;
     margin-top: 20px;
     color: #FFFFFF;
+    float: left;
 }
 
 .block-train {
@@ -382,7 +384,7 @@ body{
     flex-flow: row wrap;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .task-image{
