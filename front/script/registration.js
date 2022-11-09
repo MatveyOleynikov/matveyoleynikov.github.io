@@ -1,43 +1,55 @@
+import { projectValidator } from "./project_validator.js";
+
 const url = 'http://localhost:4000/api/users'
 
 const registration = async () => {
-    const login =  document.getElementById('login-input').value;
-    const password = document.getElementById('password-input').value;
-    const email = document.getElementById('email-input').value;
+  const login = document.getElementById('login-input').value;
+  const password = document.getElementById('password-input').value;
+  const email = document.getElementById('email-input').value;
 
 
-    //проверка
-    if (validator.isEmail(email) == false){
-        alert("Email is not valid");
-        return;
-    }
+  //проверка
+  if (validator.isEmail(email) == false) {
+    alert("Email is not valid");
+    return;
+  }
 
-    console.log(login + " " + password + " " + email);
+  if (projectValidator.isLogin(login) == false) {
+    alert('Login is not valid');
+    return;
+  }
 
-    user = {
-        name : login,
-        password: password,
-        email: email
-    }
+  if (projectValidator.isPassword(password) == false) {
+    alert('Password is not valid');
+    return;
+  }
 
-    const response = await fetch(url,  {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(user)
-      }
-    );
-    
-    if (response.status == 200){
-    result = await response.json();
+  console.log(login + " " + password + " " + email);
+
+  const user = {
+    name: login,
+    password: password,
+    email: email
+  }
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(user)
+  }
+  );
+
+  if (response.status == 200) {
+    const result = await response.json();
     console.log(result);
     localStorage.setItem('token', result)
     window.location.href = 'index.html';
-    }
+  }
 
-    console.log(response.status);
-        
+  console.log(response.status);
+
 }
 
 const button = document.getElementById('registration-button');
