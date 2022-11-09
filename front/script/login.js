@@ -1,4 +1,3 @@
-// const {fetch} = require("fetch")
 const url = 'http://localhost:4000/api/users'
 
 const login = async () => {
