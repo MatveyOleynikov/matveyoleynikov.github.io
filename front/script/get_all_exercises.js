@@ -4,8 +4,9 @@ const url = 'http://localhost:4000/api/exercises' //нот фоунд (надо 
 const new_exercise = async () => {
     console.log('xxx ')
     //window.location.href = 'tasks.html';
-    const response = await fetch(url +  new URLSearchParams())
-    console.log(JSON.stringify(response, null, 2))
+    const response = await fetch(url);
+    result = await response.json();
+    console.log(result)
 }
 
 const button = document.getElementById('add-task');

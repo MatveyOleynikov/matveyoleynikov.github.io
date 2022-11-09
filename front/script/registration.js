@@ -1,5 +1,3 @@
-
-// const validator = require('validator')
 const url = 'http://localhost:4000/api/users'
 
 const registration = async () => {
@@ -9,10 +7,10 @@ const registration = async () => {
 
 
     //проверка
-    // if (validator.isEmail(email) == false){
-    //     alert("Email is not valid");
-    //     return;
-    // }
+    if (validator.isEmail(email) == false){
+        alert("Email is not valid");
+        return;
+    }
 
     console.log(login + " " + password + " " + email);
 

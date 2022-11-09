@@ -7,6 +7,7 @@
     "start": "node login.js"
   },
   "author": "",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
     "fetch": "^1.1.0",
