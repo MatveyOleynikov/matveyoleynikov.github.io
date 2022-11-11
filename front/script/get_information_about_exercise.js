@@ -1,7 +1,8 @@
 // const {fetch} = require("fetch")
 // const url = 'http://localhost:4000/api/exercises' //нот фоунд (надо добавить в app)
 
-const check_infa = async () => {
+const check_infa = async (obj) => {
+    alert(obj.id);
     console.log('infa ')
 }
 
