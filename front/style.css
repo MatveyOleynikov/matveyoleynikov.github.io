@@ -349,13 +349,15 @@ body{
 
 .block-task {
     flex: 32% 0 1;
+    margin-right: 1.325%;
     height: 300px;
-    width: 32%; /* Можно задать любую другую ширину блока */
+    /*width: 32%; /* Можно задать любую другую ширину блока */
     background: #2780B1;
     /*margin: .5rem; */
     border-radius: 10px;
     margin-top: 20px;
     color: #FFFFFF;
+    float: left;
 }
 
 .block-train {
@@ -382,7 +384,7 @@ body{
     flex-flow: row wrap;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .task-image{
@@ -498,4 +500,41 @@ button:active {
 .block-train a:hover {
     color: white;
     text-decoration: underline;
+}
+
+.information-button {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.information-button .information-buttontext {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    top: -5px;
+    left: 125%;
+}
+
+.information-button .information-buttontext::after {
+    content: "";
+    position: absolute;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.information-button:hover .information-buttontext {
+    font-size: 12px;
+    visibility: visible;
+    opacity: 1;
 }
