@@ -12,6 +12,19 @@ class ExerciseController{
             res.status(404).json(e.message);
         }
     }
+
+    
+    async addTrain(req, res){
+        try{
+            console.log("body")
+            console.log(req.body)
+            const train_added = await exerciseService.addTrain(req.body)
+            res.json(train_added)
+        }
+        catch(e){
+            res.status(400).json(e.message);
+        }
+    }
 }
 
 module.exports = new ExerciseController();
