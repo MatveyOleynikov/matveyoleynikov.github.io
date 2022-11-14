@@ -38,7 +38,8 @@ const startUp = () => {
 
 startUp()
 
-app.get('subscription.html', authMiddlewaree, (req, res) =>{
+app.get('/subscription.html', authMiddlewaree, (req, res) =>{
+    console.log('fff');
     return res.status(401).end();
 }
 )

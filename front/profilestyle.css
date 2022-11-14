@@ -1,0 +1,14 @@
+.circle-icon {
+    width: 100px; 
+    height: 100px;
+    background: #83A7C9;
+    border-radius: 50%;
+}
+
+.rectangle-block{
+    width: 220px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #7A2977;
+}
+
