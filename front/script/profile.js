@@ -4,6 +4,6 @@ const logout = document.querySelector('.logout-button')
 console.log(logout)
 logout.onclick = () => {
     console.log('logout...')
-    localStorage.setItem('token', null);
+    localStorage.removeItem('token');
     window.location.href = 'login.html'
 }

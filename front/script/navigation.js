@@ -19,6 +19,7 @@ subscription.onclick = async () => {
     }
 
     if (response.status == 403){
+        localStorage.removeItem('token');
         window.location.href = 'login.html';
     }
     
@@ -26,9 +27,25 @@ subscription.onclick = async () => {
     console.log(response)
 }
 
-if (document.querySelectorAll(navBlockString).length > 5){
-    const logout = document.querySelectorAll(navBlockString)[5]
-    logout.onclick = () => {
-        localStorage.setItem('token', null);
+
+const makeProfileVisible = () => {
+    
+    const nav_block = document.querySelectorAll(navBlockString)
+    const profile = nav_block[5]
+    const login =  nav_block[4]
+    console.log(localStorage.getItem('token'))
+    console.log(nav_block)
+    const token = localStorage.getItem('token');
+    if ( token != null){
+
+        login.style.display = 'none';
+        profile.style.display = 'visible';
     }
-}
+    else{
+        console.log('ffffffff')
+        login.style.display = 'visible';
+        profile.style.display = 'none';
+    }
+} 
+
+makeProfileVisible()

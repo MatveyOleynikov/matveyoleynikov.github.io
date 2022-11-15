@@ -30,6 +30,7 @@ const login = async () => {
       window.location.href = 'index.html';
    }
    else {
+      localStorage.removeItem('token') 
       alert("Wrong Login or  Wrong Password")
    }
 

@@ -9,9 +9,12 @@ const get_data = async () => {
 
     if (response.status != 200){
         window.location.href ='login.html';
+        localStorage.removeItem('token') 
     }
+
     console.log(response.status)
     const result = await response.json();
+
     console.log(result);
 
     return result;
