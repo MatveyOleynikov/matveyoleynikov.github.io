@@ -3,6 +3,6 @@ const TrainController = require('../controller/trainController');
 
 const TrainRouter = new Router();
 
-TrainRouter.get('/trains', TrainController.getAllTrains);
+TrainRouter.get('/all_trains', TrainController.getAllTrains);
 
 module.exports = TrainRouter;
