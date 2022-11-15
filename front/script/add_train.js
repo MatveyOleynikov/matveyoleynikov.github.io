@@ -15,6 +15,8 @@ const new_train = async () => {
         }
     }
 
+    console.log(exercise_list)
+
     const response_2 = await fetch(url, {
         method: 'POST',
         headers: {

@@ -3,16 +3,33 @@ const url_trains = 'http://localhost:4000/api/all_trains' //нот фоунд (�
 
 const generate_trains = async () => {
     console.log("generation")
-    const response = await fetch(url_trains);
-    result = await response.json();
+    //const response = await fetch(url_trains);
+    const data = await get_data()
+    console.log("polzovatel")
+    console.log(data)
+    console.log(data.name)
+    const response_add_train = await fetch(url_trains, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+            body: JSON.stringify(data)
+        }
+    );  
+
+    const result = await response_add_train.json()
+
+    console.log(result)
     //window.location.href = 'tasks.html';
+
+    console.log(data)
 
     document.querySelector('#content-tasks-and-trains').innerHTML = "<article class=\"main-information-trains\" id=\"all-trains\"><h1 style=\"text-align: center;\">Список упражнений</h1><div class=\"trains\" id=\"trains\">"
 
     for (var key in result) {
         console.log(key)
         console.log(result[key])
-        var new_element = "<div class=\"block-train\"><img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + "</div></div>";
+        var new_element = "<div class=\"block-train\"><img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\" onclick=\"delete_train(this);\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + "</div></div>";
         document.getElementById('trains').innerHTML += new_element;
         //document.querySelector('#tasks').append("<div class=\"block-task\"> <img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i</button> <button class=\"plus-button\">+</button> <div class=\"description-task\">Метод Хуетод</div> </div>");
         console.log(key, result[key].name)

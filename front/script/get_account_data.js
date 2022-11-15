@@ -1,9 +1,8 @@
-const url = 'http://localhost:4000/api/users/user' //нот фоунд (надо добавить в app)
+const url_user = 'http://localhost:4000/api/users/user' //нот фоунд (надо добавить в app)
 
 const get_data = async () => {
-    
     headers = { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
-    const response = await fetch(url, {
+    const response = await fetch(url_user, {
         headers: headers
     })
 
