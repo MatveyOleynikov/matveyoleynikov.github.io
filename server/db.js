@@ -168,6 +168,7 @@ const TrainExercise = sequelize.define('train_exercises',
 
 Train.belongsToMany(Exercise, {through: TrainExercise, foreignKey: 'train_id'})
 Exercise.belongsToMany(Train, {through: TrainExercise, foreignKey: 'exercise_id'})
+const TrainToExercise = new TrainExercise
 
 // экспрорт  базы данных
 const db = {
@@ -175,7 +176,8 @@ const db = {
     User,
     listsOfExercises,
     Exercise,
-    Train
+    Train,
+    TrainToExercise
 }
 
 module.exports = db
@@ -212,11 +214,18 @@ module.exports = db
 // // })
 
 // async function func(){
-//     const train = await Train.findOne();
+//     const train = await Train.findOne({where : {train_id : 5}});
 //     const exercise = await Exercise.findOne();
-//    // exercise.name = 'fhksdgf'
-//     // console.log(JSON.stringify(train, null, 2))
-//     // console.log(JSON.stringify(exercise, null, 2))
-//     //console.log(exercise) 
+//    exercise.name = 'fhksdgf'
+//     console.log(JSON.stringify(train, null, 2))
+//     console.log(JSON.stringify(exercise, null, 2))
+//     // console.log(exercise) 
 //      train.addExercise(exercise);   
 // }
+
+// func()
+// TrainToExercise.create({train_id: 5, exercise_id : 1}).then(rs => {
+//     console.log(rs);
+// })
+
+// const train = Train.findOne({include: Exercise}).then(res => console.log(JSON.stringify(res, null, 2)))

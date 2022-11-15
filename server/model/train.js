@@ -3,7 +3,7 @@ const DataTypes = require('sequelize')
 module.exports = (sequelize) =>{
     return sequelize.define('trains',
     {
-        trains_id : {
+        train_id : {
             type: DataTypes.INTEGER,
             allowNull: false,
             field: 'train_id',
