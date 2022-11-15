@@ -47,8 +47,9 @@ const registration = async () => {
     localStorage.setItem('token', result)
     window.location.href = 'index.html';
   }
-  
-  alert(result)
+  else {
+    alert(result)
+  }
 
 }
 

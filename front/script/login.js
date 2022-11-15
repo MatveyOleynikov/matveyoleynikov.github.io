@@ -27,10 +27,11 @@ const login = async () => {
       const result = await response.json();
       console.log(result)
       localStorage.setItem('token', result)
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
    }
-   
-   alert("Wrong Login or  Wrong Password")
+   else {
+      alert("Wrong Login or  Wrong Password")
+   }
 
 }
 
