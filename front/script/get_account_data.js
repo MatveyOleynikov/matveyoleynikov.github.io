@@ -8,7 +8,7 @@ const get_data = async () => {
     })
 
     if (response.status != 200){
-        window.location.href ='error.html';
+        window.location.href ='login.html';
     }
     console.log(response.status)
     const result = await response.json();
@@ -24,7 +24,6 @@ const fill_username = (username) => {
 
 const fill_email = (email) => {
     const email_span = document.getElementById('email-span')
-    console.log(email_span)
      email_span.textContent = email
 }
 

@@ -19,7 +19,7 @@ subscription.onclick = async () => {
     }
 
     if (response.status == 403){
-        window.location.href = 'error.html';
+        window.location.href = 'login.html';
     }
     
     const result = await resizeBy

@@ -41,14 +41,14 @@ const registration = async () => {
   }
   );
 
+  const result = await response.json();
   if (response.status == 200) {
-    const result = await response.json();
     console.log(result);
     localStorage.setItem('token', result)
     window.location.href = 'index.html';
   }
-
-  console.log(response.status);
+  
+  alert(result)
 
 }
 
