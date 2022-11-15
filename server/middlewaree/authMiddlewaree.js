@@ -12,8 +12,10 @@ const authMiddlewaree = (req, res, next) => {
             }
 
             const decodeData = jwt.verify(token, secret )
-            req.user = { name :decodeData.name, email: decodeData.email };
-            console.log(res)
+            console.log(decodeData)
+            // console.log('dsafslffsda');
+            req.user = { user_id: decodeData.user_id, name :decodeData.name, email: decodeData.email };
+            console.log(req.user)
             next()
     }
     catch (e){

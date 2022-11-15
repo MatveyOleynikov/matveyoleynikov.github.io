@@ -1,3 +1,5 @@
+import { projectValidator } from "./project_validator.js";
+
 const url = 'http://localhost:4000/api/users'
 
 const login = async () => {
@@ -22,11 +24,13 @@ const login = async () => {
 
    if (response.status == 200) {
 
-      result = await response.json();
+      const result = await response.json();
       console.log(result)
       localStorage.setItem('token', result)
-      window.location.href = 'index.html';
+      window.location.href = 'login.html';
    }
+   
+   alert("Wrong Login or  Wrong Password")
 
 }
 

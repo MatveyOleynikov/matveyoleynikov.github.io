@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken')
 const {secret} = require('../config/configJWT')
 const NullError = require('../error/nullError')
 
-generateJWT = (userId, name, email) => {
+generateJWT = (user_id, name, email) => {
 
     const payload = {
-        userId,
+        user_id,
         name,
         email
     }
@@ -23,7 +23,7 @@ class UserController{
         try{
             console.log(req.body)
             const user = await UserService.create(req.body);
-            const token = generateJWT(user.userId, user.name,)
+            const token = generateJWT(user.user_id, user.name, user.email)
             res.json(token)
         }
         catch(e){
@@ -38,7 +38,7 @@ class UserController{
             const usr = {name : req.query.name, password: req.query.password};
             console.log(usr);
             const user = await UserService.getByNameAndPassword(usr)
-            const token = generateJWT(user.userId, user.name, user.email)
+            const token = generateJWT(user.user_id, user.name, user.email)
             console.log(token)
             res.json(token)
         }
@@ -54,6 +54,7 @@ class UserController{
             res.status(403).json("forbidden");
         }
         else {
+            // console.log('sdaas ' + user)
             res.json(user)
         }
     }
