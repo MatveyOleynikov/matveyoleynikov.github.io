@@ -15,14 +15,20 @@ const new_train = async () => {
         }
     }
 
+    const data = await get_data()
+
+    console.log(data.user_id)
+
     console.log(exercise_list)
+
+    exercise_list.push(data.user_id)
 
     const response_2 = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         },
-        body: JSON.stringify(exercise_list)
+        body: JSON.stringify(exercise_list),
         }
     );  
 

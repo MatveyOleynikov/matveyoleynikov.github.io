@@ -18,7 +18,13 @@ class ExerciseController{
         try{
             console.log("body")
             console.log(req.body)
-            const train_added = await exerciseService.addTrain(req.body)
+            console.log(req)
+            const user_id = req.body[req.body.length - 1]
+            console.log("bebrastan")
+            console.log(user_id)
+            req.body.pop()
+            console.log(req.body)
+            const train_added = await exerciseService.addTrain(req.body, user_id)
             res.json(train_added)
         }
         catch(e){

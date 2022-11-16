@@ -15,11 +15,12 @@ class ExerciseService {
         return allExercises
     }
 
-    async addTrain(lists_exercises) {
+    async addTrain(lists_exercises, my_user_id) {
         console.log("olololo");
         console.log(lists_exercises);
 
-        const train = await Train.create({name: 'trenirovka glaz', user_id : 1})
+        console.log(my_user_id)
+        const train = await Train.create({name: 'trenirovka glaz', user_id : my_user_id})
 
         // const train_exercise = TrainToExercise.create({train_id: 5, exercise_id : 1}).then(rs => {
         //     console.log(rs);
