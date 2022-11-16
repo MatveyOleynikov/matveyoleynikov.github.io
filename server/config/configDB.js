@@ -1,7 +1,7 @@
 configDB = {
     name: "eyesightkick",
     user: 'root',
-    password: 'harec2003k',
+    password: 'myRoTpass1ord!=',
     host: 'localhost',
     dialect: 'mysql'
 };
