@@ -9,26 +9,10 @@
     <link rel="stylesheet" href="subscription_style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navigation"> 
-            <div class="icon">
-                <a href="index.html" class="nav_block">
-                    <div id="circle"></div>
-                    <ul class="logo">
-                        EyeSightKick
-                    </ul>
-                </a>
-            </div>
-            <ul class="main-menu">
-                <li><a href="index.html" class="nav_block">Главная</a></li>
-                <li><a href="trains.html" class="nav_block" >Тренировки</a></li>
-                <li><a href="subscription.html"  class="nav_block" >Подписка</a></li>
-                <li><a href="login.html" class="nav_block">Войти</a></li>
-                <li><a href="profile.html" class="nav_block"> Профиль</a></li>
-            </ul>
-         
-        </nav>
-    </header>
+    <div class="header">
+        <header class="header" id="header" style="min-width: 1000px; position: fixed">
+        </header>
+    </div>
 
     <section class="main-information main-information-content">
         <article class="subscription-content">
@@ -81,6 +65,8 @@
 
         <button class="Pay">ОПЛАТИТЬ</button>
     </section>
+    
+    <script  src="script/make_header.js"></script>
     <script  src="script/navigation.js"></script>
 </body>
 </html>

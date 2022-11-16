@@ -3,7 +3,7 @@ const navBlockString = '.nav_block'
 const subscription = document.querySelectorAll(navBlockString)[3]
 console.log(subscription)
 
-subscription.onclick = async () => {
+make_navigation = async () => {
 
     console.log(';ksdfjdsa');
     headers = { 'Authorization': 'Bearer ' + localStorage.getItem('token') }

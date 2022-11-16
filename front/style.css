@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding: 0;
-    border: 0;  
+    border: 0;
 }
 
 body{
@@ -42,7 +42,6 @@ body{
 }
 
 .main-menu{
-    position: absolute;
     margin: 0;
     top: 10px; 
     right: 10px;
@@ -50,6 +49,7 @@ body{
     display: flex;
     list-style: none;
     flex-direction: row;
+    background-color: #FFFFFF;
 }
 
 .header a {
