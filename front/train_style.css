@@ -52,3 +52,29 @@
     color: #8A919B;
     text-decoration: underline;
 }
+
+.pusk-button{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 33px 0 33px 50px;
+    border-color: #2780B1 #2780B1 #2780B1 #21C43B;
+
+    margin-left: 37px;
+    margin-top: 15px;
+}
+
+.mysor-button{
+    height: 90px;
+    width: 90px;
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mysor-button:hover{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mysor-button:active{
+    background-color: rgba(0, 0, 0, 0);
+}
