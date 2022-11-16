@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #6D5A6D;
+    background-color: #EDEEF0;
     margin: 0;
     position: relative;
 }
@@ -15,7 +15,7 @@ body{
     align-items: center;
     /* justify-content: right; */
     width: 100%;
-    background-color: #7B2876;
+    background-color: #FFFFFF;
     height: 50px;
 }
 
@@ -38,7 +38,7 @@ body{
 .logo{
     margin-top: 5px; 
     margin-left: 55px;
-    color:#D4D4D4;
+    color:#8A919B;
 }
 
 .main-menu{
@@ -54,65 +54,32 @@ body{
 
 .header a {
     font-family: 'Oswald', sans-serif;
-    color: #D5D5D5;
+    color: #8A919B;
     text-decoration: none; /* Убираем подчеркивание у ссылок */
 }
 
 .header a:visited {
-    color: #D5D5D5;
+    color: #8A919B;
 } 
 
 .header a:hover {
-    color: #D5D5D5;
+    color: #8A919B;
     text-decoration: underline;
-}
-
-.main-information{
-    margin: 5px 15% 0% 15%;
-    border: 4px double #467AAC; /* Параметры границы */
-    background: #D9D9D9; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-}
-
-.main-information-header{
-    text-align: center;
 }
 
 .main-information-content{
     padding: 5px 5% 0% 5%;
 }
 
-.login-block{
-    margin: 5px 30% 0% 30%;
-    border: 4px double #467AAC; /* Параметры границы */
-    background: #D9D9D9; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-    text-align: center;
-}
-
-.login-block a{
-    font-family: sans-serif;
-    color: black; /* Цвет обычной ссылки */ 
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
-}
-
-.login-block a:visited {
-    color: black; /* Цвет посещенной ссылки */ 
-} 
-
-.login-block a:hover {
-    color: black; /* Цвет ссылки при наведении на нее курсора мыши */
-    text-decoration: underline;
-}
-
 .icon a:hover{
     text-decoration: none;
 }
 
-.main-information-index{
+.main-information{
     margin: 5px 15% 0% 15%;
-    border: 4px double #467AAC; /* Параметры границы */
-    background: #D9D9D9; /* Цвет фона */
+    border: 2px solid #DCE1E5; /* Параметры границы */
+    border-radius: 18px;
+    background: #FFFFFF; /* Цвет фона */
     padding: 10px; /* Поля вокруг текста */
     font-family: 'Inter';
     font-style: normal;
@@ -120,7 +87,8 @@ body{
     font-size: 15px;
     line-height: 25px;
 
-    color: #380D0D;
+    color: #656C72;
+    text-align: center;
 }
 
 .main-information-content{
@@ -134,35 +102,7 @@ body{
     font-size: 15px;
     line-height: 25px;
 
-    color: #380D0D;
-}
-
-.main-information-trains{
-    margin: 5px 15% 0% 15%;
-    border: 4px double #467AAC; /* Параметры границы */
-    background: #D9D9D9; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 25px;
-
-    color: #380D0D;
-}
-
-.main-information-tasks{
-    margin: 5px 15% 0% 15%;
-    border: 4px double #467AAC; /* Параметры границы */
-    background: #D9D9D9; /* Цвет фона */
-    padding: 10px; /* Поля вокруг текста */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 25px;
-
-    color: #380D0D;
+    color: #000;
 }
 
 .subscription-content{
@@ -347,55 +287,6 @@ body{
     border-radius: 5px;
 }
 
-.block-task {
-    flex: 32% 0 1;
-    margin-right: 1.325%;
-    height: 300px;
-    /*width: 32%; /* Можно задать любую другую ширину блока */
-    background: #2780B1;
-    /*margin: .5rem; */
-    border-radius: 10px;
-    margin-top: 20px;
-    color: #FFFFFF;
-    float: left;
-}
-
-.block-train {
-    flex: 48% 0 1;
-    height: 300px;
-    width: 48%; /* Можно задать любую другую ширину блока */
-    background: #2780B1;
-    /*margin: .5rem; */
-    border-radius: 10px;
-    margin-top: 20px;
-    color: #FFFFFF;
-}
-  
-.trains {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-}
-
-.tasks {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    align-content: center;
-    /*justify-content: space-between;*/
-}
-
-.task-image{
-    float: left;
-    margin-top: 25px; /* если сделать паддинг, то будет угар*/
-    margin-left: 25px;
-    width: 65%;
-    height: 65%;
-    border-radius: 30px;
-}
-
 .information-button{
     background: #641B70;
     float: right;
@@ -431,32 +322,10 @@ body{
     margin-top: 15px;
 }
 
-.description-task{
-    margin-top: 250px;
-    text-align: center;
-    color: white;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 20px;
-}
-
-.description-train{
-    margin-top: 70px;
-    text-align: center;
-    color: white;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: 20px;
-}
-
-.main-information-trains{
-    min-width: 850px;
-    max-width: 850px;
-}
-
 button{
     background-color: #7B2876;
 }
+
 button:hover {
     background: #180A8F;
 }
@@ -478,28 +347,6 @@ button:active {
 
 .mysor-button:active{
     background-color: rgba(0, 0, 0, 0);
-}
-
-.make-train{
-    height: 100%;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 30%;
-}
-
-.block-train a {
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
-}
-
-.block-train a:visited {
-    color: white;
-} 
-
-.block-train a:hover {
-    color: white;
-    text-decoration: underline;
 }
 
 .information-button {

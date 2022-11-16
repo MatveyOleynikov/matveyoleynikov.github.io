@@ -7,7 +7,7 @@ const new_exercise = async () => {
     result = await response.json();
     //window.location.href = 'tasks.html';
 
-    document.querySelector('#content-tasks-and-trains').innerHTML = "<article class=\"main-information-tasks\"><h1 style=\"text-align: center;\">Список упражнений</h1><div class=\"tasks\" id=\"tasks\">"
+    document.querySelector('#content-tasks-and-trains').innerHTML = "<article class=\"main-information\"><h1 style=\"text-align: center;\">Список упражнений</h1><div class=\"tasks\" id=\"tasks\">"
 
     for (var key in result) {
         //let dv = document.createElement('dv');

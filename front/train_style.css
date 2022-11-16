@@ -1,0 +1,54 @@
+.main-information{
+    min-width: 850px;
+    max-width: 850px;
+}
+
+.block-train {
+    flex: 48% 0 1;
+    height: 300px;
+    width: 48%; /* Можно задать любую другую ширину блока */
+    background: #2780B1;
+    /*margin: .5rem; */
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.trains {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.description-train{
+    margin-top: 70px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+}
+
+.make-train{
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30%;
+}
+
+.block-train a {
+    font-family: 'Oswald', sans-serif;
+    color: #8A919B;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.block-train a:visited {
+    color: #8A919B;
+} 
+
+.block-train a:hover {
+    color: #8A919B;
+    text-decoration: underline;
+}

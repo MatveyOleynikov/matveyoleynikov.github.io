@@ -1,0 +1,21 @@
+.login-block{
+    max-width: 500px;
+    margin: 5px 30% 0% 30%;
+    padding: 10px; /* Поля вокруг текста */
+    text-align: center;
+}
+
+.login-block a{
+    font-family: sans-serif;
+    color: black; /* Цвет обычной ссылки */ 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.login-block a:visited {
+    color: black; /* Цвет посещенной ссылки */ 
+} 
+
+.login-block a:hover {
+    color: black; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline;
+}
