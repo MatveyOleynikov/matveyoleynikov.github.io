@@ -9,6 +9,7 @@ const get_data = async () => {
     if (response.status != 200){
         window.location.href ='login.html';
         localStorage.removeItem('token') 
+        return false
     }
 
     console.log(response.status)

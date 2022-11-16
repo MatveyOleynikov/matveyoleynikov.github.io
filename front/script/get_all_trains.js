@@ -5,6 +5,11 @@ const generate_trains = async () => {
     console.log("generation")
     //const response = await fetch(url_trains);
     const data = await get_data()
+
+    if (!data){
+        return false
+    }
+
     console.log("polzovatel")
     console.log(data)
     console.log(data.name)
