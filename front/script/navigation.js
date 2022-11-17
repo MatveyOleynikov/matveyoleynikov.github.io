@@ -31,8 +31,14 @@ make_navigation = async () => {
 const makeProfileVisible = () => {
     
     const nav_block = document.querySelectorAll(navBlockString)
-    const profile = nav_block[5]
-    const login =  nav_block[4]
+    let profile_str = 4
+    let login_str = 3
+    if( window.innerWidth >= 700 ){
+        profile_str += 1
+        login_str += 1
+    }
+    const profile = nav_block[profile_str]
+    const login =  nav_block[login_str]
     console.log(localStorage.getItem('token'))
     console.log(nav_block)
     const token = localStorage.getItem('token');

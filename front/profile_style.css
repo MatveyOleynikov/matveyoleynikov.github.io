@@ -1,0 +1,24 @@
+.main-information{
+    text-align: left;
+}
+
+.circle-icon {
+    width: 110px; 
+    height: 110px;
+    background: #83A7C9;
+    border-radius: 50%;
+}
+
+.rectangle-block{
+    width: 400px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #180A8F;
+    color: white;
+}
+
+.logout-button{
+    font-size: 20px;
+    width: 150px;
+    height: 30px;
+}

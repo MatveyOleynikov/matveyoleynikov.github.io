@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="profilestyle.css">
+    <link rel="stylesheet" href="profile_style.css">
 </head>
 <body>
     <div class="header">
@@ -14,17 +14,16 @@
         </header>
     </div>
 
-    <article class="main-information-index">
-        <h1>Профиль</h1> 
+    <article class="main-information" style="min-width: 420px">
+        <h1>Профиль пользователя</h1> 
+        <br>
         <div class="user-date-container">  
             <div class="user-date">
-
-                <h2 id="username">username</h2>
-                <div class="circle-icon">
+                <div class="circle-icon" style="float:left">
                     
                 </div>
-                
-                <div class="rectangle-block">
+                <h2 id="username" style="">username</h2>
+                <div class="rectangle-block" style="margin-left: 10px;">
                      <div class="rectangle-text">
                         Почта: <span id = 'email-span'> mymail@mail.ru</span> <br>
                          <span id = 'subscription-status-span'> Status: PRO </span>
@@ -33,10 +32,10 @@
         
             </div>
       </div>
-
-      <button class="logout-button">
+        <br><br>
+        <button class="logout-button">
             Выйти
-      </button>
+        </button>
     </article>
 
     <script  src="script/make_header.js"></script>
