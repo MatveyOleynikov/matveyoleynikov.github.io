@@ -17,7 +17,7 @@ const new_exercise = async () => {
                 <button class="plus-button">+</button>
                 <div class="description-task">Метод Арсения</div>
             </div>*/
-        var new_element = "<div class=\"block-task\"> <img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i <span class=\"information-buttontext\">" + result[key].description + "</span> </button> <button class=\"plus-button\" id=\"plus-" + result[key].exercise_id + "\" onclick=\"check_infa(this);\">+</button> <div class=\"description-task\"> " + result[key].name + " </div> </div>";
+        var new_element = "<div class=\"block-task\"> <img src=\"images/exercises/" + result[key].exercise_id + ".jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i <span class=\"information-buttontext\">" + result[key].description + "</span> </button> <button class=\"plus-button\" id=\"plus-" + result[key].exercise_id + "\" onclick=\"check_infa(this);\">+</button> <div class=\"description-task\"> " + result[key].name + " </div> </div>";
         document.getElementById('tasks').innerHTML += new_element;
         //document.querySelector('#tasks').append("<div class=\"block-task\"> <img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i</button> <button class=\"plus-button\">+</button> <div class=\"description-task\">Метод Хуетод</div> </div>");
         console.log(key, result[key].name)
