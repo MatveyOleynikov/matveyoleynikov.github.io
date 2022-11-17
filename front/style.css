@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #EDEEF0;
+    background-color: white;
     margin: 0;
     position: relative;
 }
@@ -79,7 +79,7 @@ body{
     margin: 5px 15% 0% 15%;
     border: 2px solid #DCE1E5; /* Параметры границы */
     border-radius: 18px;
-    background: #FFFFFF; /* Цвет фона */
+    background: #EDEEF0; /* Цвет фона */
     padding: 10px; /* Поля вокруг текста */
     font-family: 'Inter';
     font-style: normal;
