@@ -1,3 +1,5 @@
+// import { makeProfileVisible } from "./navigation"
+
 const make_header = async () => {
     console.log("HEAD")
     if( window.innerWidth >= 700 ){

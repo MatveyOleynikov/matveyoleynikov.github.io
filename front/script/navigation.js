@@ -1,9 +1,8 @@
 const urlSubscription = 'http://localhost:4000/subscription'
 const navBlockString = '.nav_block'
-const subscription = document.querySelectorAll(navBlockString)[3]
-console.log(subscription)
 
-make_navigation = async () => {
+
+const make_navigation = async () => {
 
     console.log(';ksdfjdsa');
     headers = { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
@@ -53,5 +52,9 @@ const makeProfileVisible = () => {
         profile.style.display = 'none';
     }
 } 
+
+const subscription = document.querySelectorAll(navBlockString)[3]
+console.log(subscription)
+subscription.onclick = make_navigation
 
 makeProfileVisible()
