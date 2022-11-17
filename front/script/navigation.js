@@ -43,7 +43,7 @@ const makeProfileVisible = () => {
     console.log(nav_block)
     const token = localStorage.getItem('token');
     if ( token != null){
-
+        console.log(profile)
         login.style.display = 'none';
         profile.style.display = 'visible';
     }
