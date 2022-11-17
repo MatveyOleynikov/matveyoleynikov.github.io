@@ -17,6 +17,8 @@ body{
     width: 100%;
     background-color: #FFFFFF;
     height: 50px;
+    
+    border-bottom: 2px solid #DCE1E5;
 }
 
 .navigation{
