@@ -209,9 +209,9 @@ module.exports = db
 //     console.log(JSON.stringify(res, null, 2))
 // })
 
-// // Exercise.findAll().then(res => {
-// //     console.log(JSON.stringify(res, null, 2))
-// // })
+// Exercise.findAll().then(res => {
+//     console.log(JSON.stringify(res, null, 2))
+// })
 
 // async function func(){
 //     const train = await Train.findOne({where : {train_id : 5}});
@@ -228,4 +228,21 @@ module.exports = db
 //     console.log(rs);
 // })
 
-// const train = Train.findOne({include: Exercise}).then(res => console.log(JSON.stringify(res, null, 2)))
+//  const train = Train.findOne({include: Exercise}).then(res => {
+//     tasks
+//  })
+
+//  const func = async () => {
+//     const train_id = 1
+//     const train = await Train.findOne(
+//         {
+//             where: {
+//                 train_id: train_id
+//             }
+//         }
+//     );
+//     const exercises = await train.getExercises();
+//     console.log(JSON.stringify(exercises, null, 2));
+//  }
+
+//  func();

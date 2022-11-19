@@ -23,7 +23,18 @@ module.exports = (sequelize) =>{
 
         list_id: {
             type: DataTypes.INTEGER
+        },
+
+        url: {
+            type : DataTypes.STRING(120)
+        },
+
+
+        time: {
+            type : DataTypes.INTEGER
         }
+
+        
     },
 
     {

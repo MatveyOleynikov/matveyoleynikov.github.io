@@ -31,6 +31,23 @@ class ExerciseController{
             res.status(400).json(e.message);
         }
     }
+
+    async getAllExercisesByTrain(req, res){
+        try{
+            
+            const train_id_string = req.params.train_id;
+            const train_id = parseInt(train_id_string);
+            console.log(train_id_string)
+            console.log(train_id)
+            const exercises = await exerciseService.getAllExercisesByTrainId(train_id);
+            res.json(exercises);
+        }
+        catch(e){
+            res.status(400).json(e.message);
+        }
+        
+    }
+    
 }
 
 module.exports = new ExerciseController();

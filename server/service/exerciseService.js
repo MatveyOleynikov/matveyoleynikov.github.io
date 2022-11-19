@@ -47,9 +47,34 @@ class ExerciseService {
         
         return true
     }
+
+    async getAllExercisesByTrainId(train_id){
+        
+        if (train_id == null){
+            throw new NullError("train_id is null");
+        }
+
+        
+        if (typeof train_id != "number"){
+            throw new Error("id is not number");
+        }
+
+        const train = await Train.findOne(
+            {
+                where : {
+                    train_id : train_id
+                }
+            }
+        );
+        const exercises = await train.getExercises();
+        console.log("true true true");
+        console.log(JSON.stringify(exercises, null, 2));
+
+        return exercises;
+    }
 }
 
-const x = new ExerciseService();
-x.getAllExercises();
+// const x = new ExerciseService();
+// // x.getAllExercises();
 
 module.exports =  new ExerciseService();
