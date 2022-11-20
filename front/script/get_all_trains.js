@@ -46,4 +46,10 @@ const generate_trains = async () => {
     //document.getElementById('tasks').innerHTML += gotovo;
 }
 
+const makeTrainActive = () =>{
+    //Неоходимо сюда засунуть id  выбранной тренировки
+    localStorage.train_id = 1;
+    window.location.href = 'exercise.html';
+}
+
 const generation = generate_trains();

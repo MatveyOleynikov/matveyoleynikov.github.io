@@ -1,4 +1,3 @@
-const train_id = 1;
 const url = 'http://localhost:4000/api/exercises/';
 let pos = 0;
 
@@ -31,9 +30,23 @@ const fillExercise = (exercise) => {
 }
 
 const findAllExerciseByTrainId = async () => {
-    const exercisesRes= await fetch(url + train_id);
-    const exercises = await exercisesRes.json();
+
+    localStorage.train_id = 3;
     
+   const train_id =  parseInt(localStorage.train_id);
+
+   if (isNaN(train_id)){
+     console.log('Error');
+     window.location.href = 'train.html';
+   }
+
+   console.log(train_id)
+    const response= await fetch(url + train_id);
+    const exercises = await response.json();
+    
+    if (response.status != 200){
+        window.location.href('error.html');
+    }
     return exercises;
 
 }
