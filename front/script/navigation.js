@@ -27,6 +27,28 @@ const make_navigation = async () => {
 }
 
 
+const make_navivagiton_direct_access = async () => {
+
+    console.log(';ksdfjdsa');
+    headers = { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
+    console.log(headers)
+    // debugger
+    response = await fetch(urlSubscription, {
+        headers: headers
+    }
+    )
+
+    if (response.status == 403){
+        localStorage.removeItem('token');
+        window.location.href = 'login.html';
+    }
+    
+    const result = await resizeBy
+    console.log(response)
+}
+
+
+
 const makeProfileVisible = () => {
     
     const nav_block = document.querySelectorAll(navBlockString)

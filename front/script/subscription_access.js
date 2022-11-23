@@ -1,1 +1,1 @@
-make_navigation()
+make_navivagiton_direct_access()
