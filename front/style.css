@@ -96,7 +96,7 @@ body{
 .main-information-content{
     margin: 5px 15% 0% 15%;
     padding: 10px; /* Поля вокруг текста */
-    font-family: 'Inter';
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -116,5 +116,5 @@ button:hover {
 }
 
 button:active {
-    background: #006CBE;
+    background: #0077FF;
 }

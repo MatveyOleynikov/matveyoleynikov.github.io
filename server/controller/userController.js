@@ -14,7 +14,7 @@ generateJWT = (user_id, name, email) => {
     return jwt.sign(payload, secret, {expiresIn : '7h'})
 }
 
-
+// Я просто разбираюсь с работой контроллера
 
 class UserController{
 

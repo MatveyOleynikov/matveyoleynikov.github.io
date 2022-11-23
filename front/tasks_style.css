@@ -6,12 +6,16 @@
     /*justify-content: space-between;*/
 }
 
+.main-information-tasks{
+    font-family: sans-serif;
+}
+
 .block-task {
     flex: 32% 0 1;
     margin-right: 1.325%;
     height: 300px;
     /*width: 32%; /* Можно задать любую другую ширину блока */
-    background: #2780B1;
+    background: #0077FF;
     /*margin: .5rem; */
     border-radius: 10px;
     margin-top: 20px;

@@ -7,7 +7,7 @@
     flex: 48% 0 1;
     height: 300px;
     width: 48%; /* Можно задать любую другую ширину блока */
-    background: #2780B1;
+    background: #0077FF;
     /*margin: .5rem; */
     border-radius: 10px;
     margin-top: 20px;
@@ -15,6 +15,7 @@
 }
 
 .trains {
+    font-family: sans-serif;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -23,6 +24,7 @@
 }
 
 .description-train{
+    font-family: sans-serif;
     margin-top: 70px;
     text-align: center;
     color: white;
