@@ -17,6 +17,7 @@ const new_train = async () => {
 
     const data = await get_data()
 
+    console.log("data.user_id")
     console.log(data.user_id)
 
     console.log(exercise_list)

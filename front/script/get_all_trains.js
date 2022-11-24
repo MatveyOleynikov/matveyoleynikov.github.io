@@ -34,7 +34,7 @@ const generate_trains = async () => {
     for (var key in result) {
         console.log(key)
         console.log(result[key])
-        var new_element = "<div class=\"block-train\"><img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\" onclick=\"delete_train(this);\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + "</div></div>";
+        var new_element = "<div class=\"block-train\"><img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"onclick=\"makeTrainActive(this);\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\" onclick=\"delete_train(this);\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + "</div></div>";
         document.getElementById('trains').innerHTML += new_element;
         //document.querySelector('#tasks').append("<div class=\"block-task\"> <img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i</button> <button class=\"plus-button\">+</button> <div class=\"description-task\">Метод Хуетод</div> </div>");
         console.log(key, result[key].name)
@@ -46,10 +46,12 @@ const generate_trains = async () => {
     //document.getElementById('tasks').innerHTML += gotovo;
 }
 
-const makeTrainActive = () =>{
+const makeTrainActive = (obj) =>{
     //Неоходимо сюда засунуть id  выбранной тренировки
-    localStorage.train_id = 1;
-    window.location.href = 'exercise.html';
+    const train_id = obj.id.slice(12, obj.id.length)
+    localStorage.train_id = train_id;
+    console.log(localStorage.train_id)
+    //window.location.href = 'exercise.html';
 }
 
 const generation = generate_trains();
