@@ -9,7 +9,7 @@ const make_header = async () => {
         console.log("Small")
         document.querySelector('#header').innerHTML = "<nav class=\"navigation\"> <ul class=\"main-menu\" style=\"position: fixed;\"><li class=\"nav_block\"><a href=\"index.html\">Главная</a></li><li class=\"nav_block\" ><a href=\"trains.html\">Тренировки</a></li><li class=\"nav_block\" ><a href=\"subscription.html\">Подписка</a></li><li class=\"nav_block\"><a href=\"login.html\">Войти</a></li><li class=\"nav_block\"><a href=\"profile.html\"> Профиль</a></li></ul></nav>"
     } 
-    makeProfileVisible()
+    //makeProfileVisible()
 }
 
 window.onresize = function( event ) {
@@ -21,7 +21,7 @@ window.onresize = function( event ) {
         console.log("Small")
         document.querySelector('#header').innerHTML = "<nav class=\"navigation\"> <ul class=\"main-menu\" style=\"position: fixed;\"><li class=\"nav_block\"><a href=\"index.html\">Главная</a></li><li class=\"nav_block\" ><a href=\"trains.html\">Тренировки</a></li><li class=\"nav_block\" ><a href=\"subscription.html\">Подписка</a></li><li class=\"nav_block\"><a href=\"login.html\">Войти</a></li><li class=\"nav_block\"><a href=\"profile.html\"> Профиль</a></li></ul></nav>"
     } 
-    makeProfileVisible()
+    //makeProfileVisible()
 };
 
 const header = make_header();
