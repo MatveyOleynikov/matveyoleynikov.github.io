@@ -27,6 +27,8 @@ CREATE TABLE `exercises` (
   `name` varchar(30) NOT NULL,
   `description` text,
   `list_id` int DEFAULT NULL,
+  `url` varchar(120) DEFAULT '/images/exercises/1.jpg',
+  `time` int NOT NULL DEFAULT '10',
   PRIMARY KEY (`exercise_id`),
   KEY `list_id` (`list_id`),
   CONSTRAINT `exercises_ibfk_1` FOREIGN KEY (`list_id`) REFERENCES `lists_of_exercises` (`list_id`)
@@ -39,7 +41,7 @@ CREATE TABLE `exercises` (
 
 LOCK TABLES `exercises` WRITE;
 /*!40000 ALTER TABLE `exercises` DISABLE KEYS */;
-INSERT INTO `exercises` VALUES (1,'техника','abcabc',1),(2,'техника','abcabc',1);
+INSERT INTO `exercises` VALUES (1,'техника','abcabc',1,'/images/exercises/1.jpg',10),(2,'техника','abcabc',1,'/images/exercises/2.jpg',20);
 /*!40000 ALTER TABLE `exercises` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +147,7 @@ CREATE TABLE `train_exercises` (
 
 LOCK TABLES `train_exercises` WRITE;
 /*!40000 ALTER TABLE `train_exercises` DISABLE KEYS */;
-INSERT INTO `train_exercises` VALUES (1,1);
+INSERT INTO `train_exercises` VALUES (3,1),(3,2),(4,2);
 /*!40000 ALTER TABLE `train_exercises` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -163,7 +165,7 @@ CREATE TABLE `trains` (
   PRIMARY KEY (`train_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `trains_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,7 +174,7 @@ CREATE TABLE `trains` (
 
 LOCK TABLES `trains` WRITE;
 /*!40000 ALTER TABLE `trains` DISABLE KEYS */;
-INSERT INTO `trains` VALUES (1,'first',1);
+INSERT INTO `trains` VALUES (3,'trenirovka glaz',1),(4,'trenirovka glaz',1);
 /*!40000 ALTER TABLE `trains` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -191,7 +193,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +202,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user','radnd@gmail.com','password');
+INSERT INTO `users` VALUES (1,'user','radnd@gmail.com','password'),(14,'user2','antch@gmail.com','password2'),(15,'admin','jdf@gmail.com','password');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-31 22:46:01
+-- Dump completed on 2022-11-24 20:03:11
