@@ -31,7 +31,7 @@ const fillExercise = (exercise) => {
 
 const findAllExerciseByTrainId = async () => {
 
-    localStorage.train_id = 3;
+    // localStorage.train_id = 3;
     
    const train_id =  parseInt(localStorage.train_id);
 

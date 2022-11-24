@@ -51,7 +51,7 @@ const makeTrainActive = (obj) =>{
     const train_id = obj.id.slice(12, obj.id.length)
     localStorage.train_id = train_id;
     console.log(localStorage.train_id)
-    //window.location.href = 'exercise.html';
+    window.location.href = 'exercise.html';
 }
 
 const generation = generate_trains();
