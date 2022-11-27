@@ -13,7 +13,7 @@
 .block-task {
     flex: 32% 0 1;
     margin-right: 1.325%;
-    height: 400px;
+    height: 300px;
     /*width: 32%; /* Можно задать любую другую ширину блока */
     background: #447bba;
     /*margin: .5rem; */
@@ -25,15 +25,15 @@
 
 .task-image{
     float: left;
-    margin-top: 4px; /* если сделать паддинг, то будет угар*/
-    margin-left: 3px;
-    width: 97.5%;
+    margin-top: 10px; /* если сделать паддинг, то будет угар*/
+    margin-left: 10px;
+    width: 65%;
     height: 65%;
     border-radius: 10px;
 }
 
 .description-task{
-    margin-top: 295px;
+    margin-top: 250px;
     text-align: center;
     color: white;
     font-family: sans-serif;
@@ -46,8 +46,8 @@
     
     background: lightskyblue;
     float: right;
-    margin-right: 8px;
-    margin-top: 70px;
+    margin-right: 15px;
+    margin-top: 15px;
     height: 50px;
     width: 50px;
     color: #FFFFFF;
@@ -58,8 +58,8 @@
 .information-button{
     background: lightskyblue;
     float: right;
-    margin-right: 8px;
-    margin-top: 70px;
+    margin-right: 15px;
+    margin-top: 15px;
     height: 50px;
     width: 50px;
     color: #FFFFFF;
