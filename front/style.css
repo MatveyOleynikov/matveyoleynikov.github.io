@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: white;
+    background-color: #EDEEF0;
     margin: 0;
     position: relative;
 }
@@ -40,7 +40,8 @@ body{
 .logo{
     margin-top: 5px; 
     margin-left: 55px;
-    color:#8A919B;
+    /* font-weight: bold; */
+    color: black;
 }
 
 .main-menu{
@@ -81,7 +82,7 @@ body{
     margin: 5px 15% 0% 15%;
     border: 2px solid #DCE1E5; /* Параметры границы */
     border-radius: 18px;
-    background: #EDEEF0; /* Цвет фона */
+    background: white; /* Цвет фона */
     padding: 10px; /* Поля вокруг текста */
     font-family: sans-serif;
     font-style: normal;
@@ -106,7 +107,7 @@ body{
 }
 
 button{
-    background-color: #0077FF;
+    background-color: #447bba;
     color: white;
     border-radius: 5px;
 }
