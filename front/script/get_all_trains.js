@@ -29,7 +29,7 @@ const generate_trains = async () => {
 
     console.log(data)
 
-    document.querySelector('#content-tasks-and-trains').innerHTML = "<article class=\"main-information\" id=\"all-trains\"><h1 style=\"text-align: center;\">Список упражнений</h1><div class=\"trains\" id=\"trains\">"
+    document.querySelector('#content-tasks-and-trains').innerHTML = "<article class=\"main-information\" id=\"all-trains\"><h1 style=\"text-align: center;\">Список тренировок</h1><div class=\"trains\" id=\"trains\">"
     
     let cnt = 1;
 
