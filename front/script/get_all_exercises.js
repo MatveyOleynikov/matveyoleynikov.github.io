@@ -23,7 +23,7 @@ const new_exercise = async () => {
         console.log(key, result[key].name)
     }
 
-    var gotovo = "<button id=\"new-train\" onclick=\"new_train()\">Добавить тренировку</button>";
+    var gotovo = "<button id=\"new-train\" onclick=\"new_train()\">Добавить в тренировку</button>";
     document.getElementById('tasks').innerHTML += gotovo;
     //console.log(result)
 }

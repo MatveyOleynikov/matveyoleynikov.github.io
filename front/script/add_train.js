@@ -24,6 +24,9 @@ const new_train = async () => {
 
     exercise_list.push(data.user_id)
 
+    if(exercise_list.length != 1){
+     
+
     const response_2 = await fetch(url, {
         method: 'POST',
         headers: {
@@ -38,4 +41,8 @@ const new_train = async () => {
     console.log(res)
 
     window.location.href = 'trains.html';
+    } else{
+        alert("Выберите хотя бы одно упражнение")
+        window.location.href = 'error.html';
+    }
 }

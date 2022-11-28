@@ -107,13 +107,13 @@ body{
 }
 
 button{
-    background-color: #447bba;
+    background-color: #0077FF;
     color: white;
     border-radius: 5px;
 }
 
 button:hover {
-    background: #180A8F;
+    background: mediumblue;
 }
 
 button:active {

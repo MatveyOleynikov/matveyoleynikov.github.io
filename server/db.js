@@ -246,3 +246,17 @@ module.exports = db
 //  }
 
 //  func();
+
+// autoNumberOfUserTrain = async () => {
+//    const result = await Train.findAll(
+//         {   
+//             include: User,
+//             where: {
+//                 user_id : 16
+//             }
+//         }
+//     )
+
+//     console.log(result.length)
+// }
+

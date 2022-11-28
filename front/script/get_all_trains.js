@@ -40,7 +40,7 @@ const generate_trains = async () => {
         console.log(key, result[key].name)
     }
 
-    var gotovo = "<div class=\"block-train\"><div class=\"make-train\"><button id=\"add-task\" onclick=\"new_exercise()\">Добавить тренировку</button></div></div>";
+    var gotovo = "<div class=\"block-train\"><div class=\"make-train\"><button id=\"add-task\" onclick=\"new_exercise()\"> Добавить тренировку </button></div></div>";
     document.getElementById('trains').innerHTML += gotovo;
     //var gotovo = "<button id=\"new-train\" onclick=\"new_train()\">Добавить тренировку</button>";
     //document.getElementById('tasks').innerHTML += gotovo;

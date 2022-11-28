@@ -3,6 +3,23 @@
     max-width: 850px;
 }
 
+
+#new-train{
+    border: 2px solid #8A919B;
+    line-height: 150%;
+    font-style: sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#add-task{
+    border: 2px solid whitesmoke;
+    line-height: 150%;
+    font-style: sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
 .block-train {
     flex: 48% 0 1;
     height: 300px;
@@ -79,4 +96,9 @@
 
 .mysor-button:active{
     background-color: rgba(0, 0, 0, 0);
+}
+
+
+.description-train{
+    font-family: sans-serif;
 }

@@ -8,9 +8,11 @@ const check_infa = async (obj) => {
         //alert(obj.id);
         //alert(obj.id[obj.id.length - 1])
         console.log('infa ')
-        obj.style.backgroundColor = '#AA0000';
+        obj.style.backgroundColor = 'darkblue';
+        obj.style.border = '2px solid white';
     }   else{
         obj.id = obj.id.slice(0, -1);
-        obj.style.backgroundColor = '#7B2876';
+        obj.style.backgroundColor = 'lightskyblue';
+        obj.style.border = '0px solid white';
     }
 }
