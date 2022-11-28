@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: eyesightkick
+-- Host: localhost    Database: eyesightkick
 -- ------------------------------------------------------
--- Server version	8.0.23
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,7 +32,7 @@ CREATE TABLE `exercises` (
   PRIMARY KEY (`exercise_id`),
   KEY `list_id` (`list_id`),
   CONSTRAINT `exercises_ibfk_1` FOREIGN KEY (`list_id`) REFERENCES `lists_of_exercises` (`list_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `exercises` (
 
 LOCK TABLES `exercises` WRITE;
 /*!40000 ALTER TABLE `exercises` DISABLE KEYS */;
-INSERT INTO `exercises` VALUES (1,'техника','abcabc',1,'/images/exercises/1.jpg',10),(2,'техника','abcabc',1,'/images/exercises/2.jpg',20);
+INSERT INTO `exercises` VALUES (1,'Метод \"стрельбы глазами\"','Смотрим вверх-вниз с максимальной амплитудой.',1,'/images/exercises/1.jpg',10),(2,'Метод \"стрельбы глазами\"','Чертим круг по часовой стрелке и обратно.',1,'/images/exercises/2.jpg',20),(3,'Метод \"стрельбы глазами\"','Рисуем глазами диагонали.',1,'/images/exercises/3.jpg',15),(4,'Метод \"стрельбы глазами\"','Рисуем взглядом квадрат.',1,'/images/exercises/4.jpg',10),(5,'Метод \"стрельбы глазами\"','Взгляд идет по дуге — выпуклой и вогнутой.',1,'/images/exercises/5.png',30),(6,'Метод \"стрельбы глазами\"','Обводим взглядом ромб.',1,'/images/exercises/6.png',25),(7,'Метод \"стрельбы глазами\"','Рисуем глазами бантики.',1,'/images/exercises/7.png',15),(8,'Метод \"стрельбы глазами\"','Рисуем букву S — сначала в горизонтальном положении, потом в вертикальном.',1,'/images/exercises/8.png',30),(9,'Метод \"стрельбы глазами\"','Чертим глазами вертикальные дуги, сначала по часовой стрелке, потом — против.',1,'/images/exercises/9.png',15),(10,'Метод \"стрельбы глазами\"','Переводим взгляд из одного угла в другой по диагоналям квадрата.',1,'/images/exercises/10.png',15),(11,'Метод \"стрельбы глазами\"','Сводим зрачки к переносице изо всех сил, приблизив палец к носу.',1,'/images/exercises/11.png',20),(12,'Метод \"стрельбы глазами\"','Часто-часто моргаем веками — как бабочка машет крылышками.',1,'/images/exercises/12.png',25),(13,'Метод Жданова','Водим глазами вверх-вниз.',1,'/images/exercises/13.png',10),(14,'Метод Жданова','Водим глазами влево вправо до упора.',1,'/images/exercises/14.png',15),(15,'Метод Жданова','Водим глазами по диагонали.',1,'/images/exercises/15.png',15),(16,'Метод Жданова','Водим глазами по воображаемому квадрату.',1,'/images/exercises/16.png',20),(17,'Метод Жданова','Водим глазами по горизонтальной бабочке.',1,'/images/exercises/17.png',20),(18,'Метод Жданова','Водим глазами по воображаемой вертикальной бабочке.',1,'/images/exercises/18.png',15),(19,'Метод Жданова','Водим глазами по кругу.',1,'/images/exercises/19.png',25),(20,'Метод Жданова','Делаем движения глазами согласно зиг-загу.',1,'/images/exercises/20.png',15),(21,'Метод Жданова','Делаем движение глазами согласно рисунку. По воображаемой горизонтальной спирали (спину).',1,'/images/exercises/21.png',15),(22,'Метод Жданова','Делаем движение глазами согласно рисунку. По воображаемой вертикальной спирали (спину).',1,'/images/exercises/22.png',15),(23,'Метод Жданова','Водим глазами по спирали типа улитка, как на рисунке.',1,'/images/exercises/23.png',15),(24,'Метод Жданова','Водим глазами по траектории на иллюстрации.',1,'/images/exercises/24.png',15),(25,'Метод Жданова','Фокусируемся на промежутке меж кончиков пальцев вытянутых рук и двигаем ладони влево -вправо с небольшой амплитудой.',1,'/images/exercises/25.png',30),(26,'Метод Жданова','Тренировка остроты зрениия. Фокусируемся на промежутке меж кончиков пальцев вытянутых рук и двигаем ладони влево -вправо с небольшой амплитудой.',1,'/images/exercises/26.png',25),(27,'Метод Жданова','Ставим пальцы вытянутых рук согласно рисунку на уровне глаз и фокусируемся на промежутке меж ними. Далее совершаем поступательные движения, пытаясь сохранить в зоне видимости кончики пальцев.',1,'/images/exercises/27.png',20),(28,'Метод Жданова','Ставим пальцы вытянутых рук согласно рисунку на уровне глаз и фокусируемся на промежутке меж ними. Далее совершаем поступательные вращательные движения, пытаясь сохранить в зоне видимости кончики пальцев.',1,'/images/exercises/28.png',15);
 /*!40000 ALTER TABLE `exercises` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +147,7 @@ CREATE TABLE `train_exercises` (
 
 LOCK TABLES `train_exercises` WRITE;
 /*!40000 ALTER TABLE `train_exercises` DISABLE KEYS */;
-INSERT INTO `train_exercises` VALUES (3,1),(3,2),(4,2);
+INSERT INTO `train_exercises` VALUES (3,1),(9,1),(3,2),(4,2),(27,2);
 /*!40000 ALTER TABLE `train_exercises` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +165,7 @@ CREATE TABLE `trains` (
   PRIMARY KEY (`train_id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `trains_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,7 +174,7 @@ CREATE TABLE `trains` (
 
 LOCK TABLES `trains` WRITE;
 /*!40000 ALTER TABLE `trains` DISABLE KEYS */;
-INSERT INTO `trains` VALUES (3,'trenirovka glaz',1),(4,'trenirovka glaz',1);
+INSERT INTO `trains` VALUES (3,'trenirovka glaz',1),(4,'trenirovka glaz',1),(9,'trenirovka glaz',17),(27,'Тренировка глаз',16);
 /*!40000 ALTER TABLE `trains` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,7 +202,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user','radnd@gmail.com','password'),(14,'user2','antch@gmail.com','password2'),(15,'admin','jdf@gmail.com','password');
+INSERT INTO `users` VALUES (1,'user','radnd@gmail.com','password'),(14,'user2','antch@gmail.com','password2'),(15,'admin','jdf@gmail.com','password'),(16,'Star_Ars','arseny.lomakin@gmail.com','harec2003'),(17,'Pidoras','GOVNOED@mail.com','harec2003'),(18,'Dastillarimus','vsevolod.lomakin2008@gmail.com','harec2003');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -244,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-24 20:03:11
+-- Dump completed on 2022-11-28 11:14:58
