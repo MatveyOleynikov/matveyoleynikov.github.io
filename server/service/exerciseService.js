@@ -15,27 +15,32 @@ class ExerciseService {
         return allExercises
     }
 
-    async autoNumberOfUserTrain(my_user_id) {
-        const result = await Train.findAll(
-             {   
-                 include: User,
-                 where: {
-                     user_id : my_user_id
-                 }
-             }
-         )
-     
-         return result.length;
-     }
+    // async autoNumberOfUserTrain(my_user_id) {
+    //     console.log('ttt')
+    //     const result = await Train.findAll(
+    //          {   
+    //              include: User,
+    //              where: {
+    //                  user_id : my_user_id
+    //              }
+    //          }
+    //      )
+            
+    //      console.log('the best girl')
+    //      return result.length;
+    //  }
 
     async addTrain(lists_exercises, my_user_id) {
         console.log("olololo");
         console.log(lists_exercises);
 
         console.log(my_user_id)
-        //const autoNumber = await autoNumberOfUserTrain(my_user_id);
-        //console.log(autoNumber)
-        const train = await Train.create({name: 'Тренировка глаз ' , user_id : my_user_id})
+        // const autoNumber = await autoNumberOfUserTrain(my_user_id);
+        // console.log('user fy==fsddfhnsda')
+        // console.log(autoNumber)
+        //const name = 'Тренировка глаз ' + autoNumber;
+        //console.log(name)
+        const train = await Train.create({name: 'Тренировка глаз' , user_id : my_user_id})
 
         // const train_exercise = TrainToExercise.create({train_id: 5, exercise_id : 1}).then(rs => {
         //     console.log(rs);
