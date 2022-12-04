@@ -1,5 +1,5 @@
 
-.animation-block.active
+.animation-block
 {
     animation: move 1.5s ease;
 }
@@ -24,7 +24,7 @@
 
 
 
-.slide-animation-block.active{
+.slide-animation-block{
     animation: slide_move 1s linear;
 }
 
