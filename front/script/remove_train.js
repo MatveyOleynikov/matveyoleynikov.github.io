@@ -13,5 +13,6 @@ const delete_train = async (obj) => {
         }
     ));  
 
-    window.location.href = 'trains.html';
+    // window.location.href = 'trains.html';
+    generate_trains()
 }
