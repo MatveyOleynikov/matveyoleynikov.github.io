@@ -110,10 +110,13 @@ button{
     background-color: #0077FF;
     color: white;
     border-radius: 5px;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
 }
 
 button:hover {
-    background: mediumblue;
+    box-shadow: inset 0 60px 0 0 mediumblue;
 }
 
 button:active {

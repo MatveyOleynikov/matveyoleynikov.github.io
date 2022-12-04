@@ -38,5 +38,4 @@ const fill_username_data = async () => {
 
 }
 
-console.log("ffff")
 fill_username_data()

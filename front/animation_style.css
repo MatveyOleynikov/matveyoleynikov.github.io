@@ -1,0 +1,47 @@
+
+.animation-block.active
+{
+    animation: move 1.5s ease;
+}
+
+@keyframes move {
+    0% {
+        /* position: fixed; */
+    visibility: hidden;
+    transition: all 1s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    }
+    100%  {
+        left: 0;
+        visibility: visible;
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+        transition: all 1.5s;
+      }
+      
+}
+
+
+
+.slide-animation-block.active{
+    animation: slide_move 1s linear;
+}
+
+@keyframes slide_move {
+    0% {
+        /* position: fixed; */
+    visibility: hidden;
+    transition: all 1s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(-100%, 0px);
+    }
+    100%  {
+        left: 0;
+        visibility: visible;
+        transform: perspective(600px) translate(0%, 0px);
+        opacity: 1;
+        transition: all 1.5s;
+      }
+      
+}
