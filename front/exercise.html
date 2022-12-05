@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation_style.css">
+    <link rel="stylesheet" href="exercise_style.css">
 </head>
 
 <body>
@@ -19,23 +21,34 @@
 
         <span class="name-exercise">Name</span>
 
-       <div class="image-exercise">
-        <img src="/images/exercises/1.jpg" alt="image">
-       </div>
+        <div class="exercise-container">
+            <div class="image-exercise">
+                <img src="/images/exercises/1.jpg" alt="image">
+            </div>
 
-       <div class="description-exercise">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptate, unde expedita minima vel eum assumenda. Repudiandae numquam sed fugit, iusto saepe, suscipit similique rerum accusantium quam deserunt ex incidunt.
-       </div>
+            <div class="exercise-information-container">
+                <span> Описание </span>
+                <div class="description-exercise exercise-information">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptate, unde expedita minima
+                    vel eum assumenda. Repudiandae numquam sed fugit, iusto saepe, suscipit similique rerum accusantium
+                    quam deserunt ex incidunt.
 
-       <div class="timer-exercise">
-            60
-       </div>
+                </div>
+                <span class="exercise-information"> Время выполнения:</span>
+                <div class="timer-exercise exercise-information">
+                    60
+                </div>
+
+            </div>
+
+        </div>
 
     </article>
 
-    <script  src="script/make_header.js"></script>
-    <script  src="script/navigation.js"></script>
-    <script src = "script/make_train.js"></script>
+    <script src="script/make_header.js"></script>
+    <script src="script/navigation.js"></script>
+    <script src="script/make_train.js"></script>
     <script src="script/animation.js"></script>
 </body>
+
 </html>

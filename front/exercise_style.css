@@ -1,0 +1,17 @@
+.image-exercise{
+    display: flex;
+    justify-items: left;
+    align-items: baseline;
+}
+
+.exercise-container{
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+}
+
+
+
+.exercise-information {
+    padding-top: 3%;
+}
