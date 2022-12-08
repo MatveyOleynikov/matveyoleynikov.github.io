@@ -16,8 +16,31 @@
     padding-top: 3%;
 }
 
+h3 {
+    padding-top: 5%;
+    font-weight: bolder;
+}
+
 .main-information{
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    overflow: auto;
+}
+
+.complete-train-button{
+    width: 180px;
+    height: 40px;
+    float: right;
+    display: inline;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-right: 10px;
+}
+
+.complete-button-container{
+    display: flex;
+    justify-content: right;
+    float: right;
 }
