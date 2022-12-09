@@ -36,7 +36,7 @@ const generate_trains = async () => {
     for (var key in result) {
         console.log(key)
         console.log(result[key])
-        var new_element = "<div class=\"block-train\"><img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"onclick=\"makeTrainActive(this);\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\" onclick=\"delete_train(this);\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + " " + cnt + " " + "</div></div>";
+        var new_element = "<div class=\"block-train\"><img src=\"images/zaglushka.jpg\" alt=\"\" class=\"task-image\"><button class=\"pusk-button\" id=\"pusk-button-" + result[key].train_id + "\"onclick=\"makeTrainActive(this);\"></button><button class=\"mysor-button\" id=\"mysor-button-" + result[key].train_id + "\" onclick=\"delete_train(this);\"><img src=\"images/mysor.png\" alt=\"\" style = \"height: 90px; width: 90px;\"></button><div class=\"description-train\">" + result[key].name + " " + cnt + " " + "</div></div>";
         document.getElementById('trains').innerHTML += new_element;
         //document.querySelector('#tasks').append("<div class=\"block-task\"> <img src=\"images/task.jpg\" alt=\"\" class=\"task-image\"> <button class=\"information-button\">i</button> <button class=\"plus-button\">+</button> <div class=\"description-task\">Метод Хуетод</div> </div>");
         console.log(key, result[key].name)
