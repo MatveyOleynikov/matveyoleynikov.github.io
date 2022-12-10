@@ -178,3 +178,72 @@ describe("Регистрация", function () {
 
 
 });
+
+
+describe("Получение пользователем данных о себе", function () {
+
+    let token = ''
+    before( (done) => {
+      const login = "user";
+      const password = "password";
+      let url = "/api/users" + "?" + "name=" + login + "&" + "password=" + password
+
+      chai.request(app)
+      .get(url)
+      .end((err, res) => {
+       token = res.body
+       done()
+      });
+    }
+    );
+
+    it("типовой тест", (done) => {
+      
+      let url ="/api/users/user"
+      chai.request(app)
+      .get(url)
+      .set({ Authorization: `Bearer ${token}`})
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.have.property("user_id");
+        res.body.should.have.property("name");
+        res.body.should.have.property("email");
+      })
+
+      done();
+    });
+}
+)
+
+
+describe("Получение пользователем данных о себе. Возможные взломы", function () {
+
+  let token = ''
+  it("неавторизованный пользователь", (done) => {
+    
+    let url ="/api/users/user"
+    chai.request(app)
+    .get(url)
+    .set({ Authorization: `Bearer ${token}`})
+    .end((err, res) => {
+      res.should.have.status(403);
+    })
+
+    done();
+  });
+
+
+  it("Неправильный токен", (done) => {
+    token = "zxmnkzcxhcjkALKKSDFHvclnbzldfig"
+    let url ="/api/users/user"
+    chai.request(app)
+    .get(url)
+    .set({ Authorization: `Bearer ${token}`})
+    .end((err, res) => {
+      res.should.have.status(403);
+    })
+
+    done();
+  });
+}
+)
