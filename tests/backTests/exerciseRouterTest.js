@@ -61,33 +61,33 @@ describe("получение всех пользователей", function () {
 });
 
 
-describe("добавить упражнение в тренировку", function () {
-    it("добавление 1 упражнения", () => {
-        let url = "/api/exercises"
-        let exercise_list = [1, 1]
+// describe("добавить упражнение в тренировку", function () {
+//     it("добавление 1 упражнения", () => {
+//         let url = "/api/exercises"
+//         let exercise_list = [1, 1]
 
-        chai.request(app)
-            .post(url)
-            .send(exercise_list)
-            .end((err, res) => {
-                res.should.have.status(200);
-            }
-            )
-    })
+//         chai.request(app)
+//             .post(url)
+//             .send(exercise_list)
+//             .end((err, res) => {
+//                 res.should.have.status(200);
+//             }
+//             )
+//     })
 
-    it("добавление  2 упражнений", () => {
-        let url = "/api/exercises"
-        let exercise_list = [1, 2, 3, 1]
+//     it("добавление  2 упражнений", () => {
+//         let url = "/api/exercises"
+//         let exercise_list = [1, 2, 3, 1]
 
-        chai.request(app)
-            .post(url)
-            .send(exercise_list)
-            .end((err, res) => {
-                res.should.have.status(200);
-            }
-            )
-    })
-});
+//         chai.request(app)
+//             .post(url)
+//             .send(exercise_list)
+//             .end((err, res) => {
+//                 res.should.have.status(200);
+//             }
+//             )
+//     })
+// });
 
 
 describe("добавить упражнение в тренировку", function () {
@@ -120,6 +120,6 @@ describe("добавить упражнение в тренировку", functi
             .end((err, res) => {
                 res.should.have.status(400);
             });
-    });
+    })
 
 });

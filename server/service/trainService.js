@@ -16,8 +16,8 @@ class TrainService {
             }
         })
 
-        console.log("boaba")
-        console.log(allTrains)
+        // console.log("boaba")
+        // console.log(allTrains)
         //console.log( JSON.stringify(allExercises, null, 2))
         return allTrains
     }
@@ -26,7 +26,7 @@ class TrainService {
     async delete_all_excerices_from_train(train_id){
         console.log("bd")
         const allExercises = await Exercise.findAll()
-        console.log(allExercises)
+        // console.log(allExercises)
 
         const train = await Train.findAll({
             where: {
