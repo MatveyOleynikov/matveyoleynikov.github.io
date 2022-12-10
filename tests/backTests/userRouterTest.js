@@ -1,4 +1,4 @@
-process.env.NODE_ENV = 'dev';
+
 // тестирование
 const chai = require('chai');
 const chaiHttp = require('chai-http');
@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 
 // подключаемые элементы
 const app = require('../../server/app')
-const {sequelize }= require('../../server/db')
+const { sequelize } = require('../../server/db')
 const deleteLastUserQuery = "delete from users order by user_id desc limit 1"
 
 
@@ -84,7 +84,7 @@ describe("Регистрация", function () {
         res.should.have.status(200);
         res.body.should.be.a('string');
         done();
-      })     
+      })
   });
 
   it("логин использует другой пользователь", function (done) {
@@ -105,7 +105,7 @@ describe("Регистрация", function () {
         res.should.have.status(400);
         // res.body.should.be.a('string');
         done();
-      })     
+      })
   });
 
   it("почту использует другой пользователь", function (done) {
@@ -126,7 +126,7 @@ describe("Регистрация", function () {
         res.should.have.status(400);
         // res.body.should.be.a('string');
         done();
-      })     
+      })
   });
 
   it("почту использует другой пользователь", function (done) {
@@ -147,7 +147,7 @@ describe("Регистрация", function () {
         res.should.have.status(400);
         // res.body.should.be.a('string');
         done();
-      })     
+      })
   });
 
   it("почту и логин использует другой пользователь", function (done) {
@@ -168,13 +168,13 @@ describe("Регистрация", function () {
         res.should.have.status(400);
         // res.body.should.be.a('string');
         done();
-      })     
+      })
   });
 
-  after((done)=> {
-   sequelize.query(deleteLastUserQuery)
-   done()
- })
+  after((done) => {
+    sequelize.query(deleteLastUserQuery)
+    done()
+  })
 
 
 });
@@ -182,27 +182,27 @@ describe("Регистрация", function () {
 
 describe("Получение пользователем данных о себе", function () {
 
-    let token = ''
-    before( (done) => {
-      const login = "user";
-      const password = "password";
-      let url = "/api/users" + "?" + "name=" + login + "&" + "password=" + password
+  let token = ''
+  before((done) => {
+    const login = "user";
+    const password = "password";
+    let url = "/api/users" + "?" + "name=" + login + "&" + "password=" + password
 
-      chai.request(app)
+    chai.request(app)
       .get(url)
       .end((err, res) => {
-       token = res.body
-       done()
+        token = res.body
+        done()
       });
-    }
-    );
+  }
+  );
 
-    it("типовой тест", (done) => {
-      
-      let url ="/api/users/user"
-      chai.request(app)
+  it("типовой тест", (done) => {
+
+    let url = "/api/users/user"
+    chai.request(app)
       .get(url)
-      .set({ Authorization: `Bearer ${token}`})
+      .set({ Authorization: `Bearer ${token}` })
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.have.property("user_id");
@@ -210,8 +210,8 @@ describe("Получение пользователем данных о себе
         res.body.should.have.property("email");
       })
 
-      done();
-    });
+    done();
+  });
 }
 )
 
@@ -220,14 +220,14 @@ describe("Получение пользователем данных о себе
 
   let token = ''
   it("неавторизованный пользователь", (done) => {
-    
-    let url ="/api/users/user"
+
+    let url = "/api/users/user"
     chai.request(app)
-    .get(url)
-    .set({ Authorization: `Bearer ${token}`})
-    .end((err, res) => {
-      res.should.have.status(403);
-    })
+      .get(url)
+      .set({ Authorization: `Bearer ${token}` })
+      .end((err, res) => {
+        res.should.have.status(403);
+      })
 
     done();
   });
@@ -235,15 +235,22 @@ describe("Получение пользователем данных о себе
 
   it("Неправильный токен", (done) => {
     token = "zxmnkzcxhcjkALKKSDFHvclnbzldfig"
-    let url ="/api/users/user"
+    let url = "/api/users/user"
     chai.request(app)
-    .get(url)
-    .set({ Authorization: `Bearer ${token}`})
-    .end((err, res) => {
-      res.should.have.status(403);
-    })
+      .get(url)
+      .set({ Authorization: `Bearer ${token}` })
+      .end((err, res) => {
+        res.should.have.status(403);
+      })
 
     done();
   });
 }
-)
+);
+
+
+describe("добавить упражнения в тренировку", function () {
+
+
+}
+);

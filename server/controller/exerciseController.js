@@ -5,7 +5,7 @@ class ExerciseController{
     async getAllExercises(req, res){
         try{
             const allExercises = await exerciseService.getAllExercises()
-            console.log(JSON.stringify(allExercises, null, 2))
+            // console.log(JSON.stringify(allExercises, null, 2))
             res.json(allExercises)
         }
         catch(e){
@@ -20,11 +20,12 @@ class ExerciseController{
             console.log(req.body)
             console.log(req)
             const user_id = req.body[req.body.length - 1]
-            console.log("bebrastan")
-            console.log(user_id)
+        //    console.log("bebrastan")
+          //  console.log(user_id)
             req.body.pop()
-            console.log(req.body)
+            //console.log(req.body)
             const train_added = await exerciseService.addTrain(req.body, user_id)
+            console.log(train_added)
             res.json(train_added)
         }
         catch(e){
@@ -37,8 +38,8 @@ class ExerciseController{
             
             const train_id_string = req.params.train_id;
             const train_id = parseInt(train_id_string);
-            console.log(train_id_string)
-            console.log(train_id)
+            //console.log(train_id_string)
+            //console.log(train_id)
             const exercises = await exerciseService.getAllExercisesByTrainId(train_id);
             res.json(exercises);
         }

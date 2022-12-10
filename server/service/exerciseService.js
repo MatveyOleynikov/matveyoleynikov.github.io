@@ -11,7 +11,7 @@ class ExerciseService {
     async getAllExercises(){
         const allExercises = await Exercise.findAll()
        
-        console.log( JSON.stringify(allExercises, null, 2))
+        // console.log( JSON.stringify(allExercises, null, 2))
         return allExercises
     }
 
