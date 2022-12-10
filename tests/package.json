@@ -1,4 +1,8 @@
-{
+{ 
+  "scripts": {
+    "start" : "npx mocha  backTests/userRouterTests.js"
+  },
+
   "dependencies": {
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",

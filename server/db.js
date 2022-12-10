@@ -182,6 +182,8 @@ const db = {
 
 module.exports = db
 
+module.exports.sequelize = sequelize;
+
 // const new_user =  User.create({name: 'user2', email: 'radnd@gmail.com', password: 'password'});
 //new_user.destroy();
 // const subscription = Subscription.create({name:'usually', price : 299, time_interval: 30})

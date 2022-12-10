@@ -53,3 +53,5 @@ app.get('/subscription', authMiddlewaree , (req, res) =>{
      res.sendFile(path.join(viewPath + '/subscription.html'));
 }   
 )
+
+module.exports = app;
