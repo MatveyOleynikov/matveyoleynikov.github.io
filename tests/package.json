@@ -1,6 +1,6 @@
 { 
   "scripts": {
-    "start" : "npx mocha  backTests/trainRouterTest.js"
+    "start" : "npx mocha  backTests/userServiceTest.js"
   },
 
   "dependencies": {
