@@ -4,9 +4,9 @@ const NullError = require('../error/nullError')
 class TrainController{
     async getAllTrains(req, res){
         try{
-            console.log("pgpg")
-            console.log(req.body)
-            console.log(req.body.name)
+            // console.log("pgpg")
+            // console.log(req.body)
+            // console.log(req.body.name)
             const allTrains = await trainService.getAllTrains(req.body.user_id)
             //console.log(JSON.stringify(allTrains, null, 2))
             res.json(allTrains)

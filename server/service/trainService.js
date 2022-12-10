@@ -7,9 +7,9 @@ const Exercise = db.Exercise
 
 class TrainService {
     async getAllTrains(user_id){
-        console.log("get zapusk")
-        console.log(user_id)
-        console.log(user_id)
+        // console.log("get zapusk")
+        // console.log(user_id)
+        // console.log(user_id)
         const allTrains = await Train.findAll({
             where: {
                 user_id: user_id
