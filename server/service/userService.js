@@ -100,6 +100,30 @@ class UserService {
 
         return usr;
     }
+
+    async changeLogin(user_id, login){
+        console.log("Service changeLogin")
+        console.log(user_id)
+        await User.update(
+            {
+                name: login,
+            },
+            {
+              where: {
+                user_id: [Number(user_id)],
+              },
+            }
+        )
+        const user = await User.findOne({
+            where: {
+                user_id: [Number(user_id)]
+            }
+        }
+        )
+        console.log(user)
+        console.log(User);
+        return user
+    }
 }
 
 

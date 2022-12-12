@@ -58,6 +58,17 @@ class UserController{
             res.json(user)
         }
     }
+
+    async changeLogin(req, res){
+        console.log(req);
+        const user_id = req.query.id
+        const login = req.query.login
+        console.log("changeLogin");
+        console.log(user_id);
+        console.log(login);
+        const user = await UserService.changeLogin(user_id, login);
+        res.json(user)
+    }
 }
 
 module.exports = new UserController();

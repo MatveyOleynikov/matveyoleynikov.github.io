@@ -25,6 +25,7 @@ const login = async () => {
    if (response.status == 200) {
 
       const result = await response.json();
+      console.log("User Login")
       console.log(result)
       localStorage.setItem('token', result)
       window.location.href = 'index.html';
