@@ -59,7 +59,7 @@ const switchExercise = (exercises) =>{
         pos++;
 
         if (pos == exercises.length){
-            window.location.href = 'trains.html';
+            window.location.href = 'finish_page.html';
         }
         
         fillExercise(exercises[pos]);

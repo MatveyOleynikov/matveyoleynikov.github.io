@@ -1,0 +1,36 @@
+.img-container {
+    margin: 20px;
+}
+
+img {
+    padding-top: 1px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.main-information {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-information-container {
+    position: relative;
+    overflow: auto;
+}
+
+.router-button-container {
+    margin-top: -25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    /* float: right; */
+}
+.router-button {
+    width: 180px;
+    height: 40px;
+    display: inline;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-right: 10px;
+}

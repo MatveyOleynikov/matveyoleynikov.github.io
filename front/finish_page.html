@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation_style.css">
+    <link rel="stylesheet" href="finish_page_style.css">
+</head>
+
+<body>
+    <div class="header">
+        <header class="header" id="header" style="min-width: 1000px; position: fixed">
+        </header>
+    </div>
+
+    <article class="main-information"  style="min-width: 420px">
+        <div class="main-information-container">
+            <h2 class="title">Ура! Вы завершили очередную тренировку</h2>
+
+            <div class="img-container">
+                <img src="./images/applause.jpg" alt="image">
+            </div>
+
+            <div class="router-button-container">
+                <button class="router-button" onclick="window.location.href = 'trains.html'">Вернуться к тренировкам</button>
+            </div>
+        </div>
+    </article>
+
+    <script src="script/make_header.js"></script>
+    <script src="script/navigation.js"></script>
+    <script src="script/make_train.js"></script>
+    <script src="script/animation.js"></script>
+    <script src="script/finish_train.js"></script>
+</body>
+
+</html>
