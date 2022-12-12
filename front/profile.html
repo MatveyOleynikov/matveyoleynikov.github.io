@@ -15,7 +15,7 @@
         </header>
     </div>
 
-    <article class="main-information" style="min-width: 420px">
+    <article id="main-information-profile" class="main-information" style="min-width: 720px">
         <h1 id="PrUser" style = "margin-left: 10px;"> Профиль пользователя</h1> 
         <br>
         <div class="user-date-container">  
@@ -24,13 +24,15 @@
                     
                 </div>
                 <h2 id="username" style="margin-bottom: 5px;">username</h2>
-                <div class="rectangle-block" style="margin-left: 10px;">
+                <div class="rectangle-block" style="float: left; margin-left: 10px;">
                      <div class="rectangle-text">
                         Почта: <span id = 'email-span'> mymail@mail.ru</span> <br>
                          <span id = 'subscription-status-span'> Status: PRO </span>
                     </div>
                 </div>
-        
+                    <button class="new-login" style="float: right;" onclick="changeLogin()">Изменить логин</button>
+                    <br><br>
+                    <button class="new-password" style="float: right;">Изменить пароль</button>
             </div>
       </div>
         <br><br>
@@ -39,6 +41,7 @@
         </button>
     </article>
 
+    <script  src="script/generate_chage.js"></script>
     <script  src="script/make_header.js"></script>
     <script  src="script/navigation.js"></script>
     <script  src="script/get_account_data.js"></script>

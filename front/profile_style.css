@@ -30,3 +30,35 @@
     width: 150px;
     height: 30px;
 }
+
+.new-login{
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+}
+
+.new-password{
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+}
+
+.push-new-login{
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+}
+
+.push-new-password{
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+}
