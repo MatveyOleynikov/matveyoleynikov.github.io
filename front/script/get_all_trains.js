@@ -43,7 +43,7 @@ const generate_trains = async () => {
         cnt += 1
     }
 
-    var gotovo = "<div class=\"block-train\"><div class=\"make-train\"><button id=\"add-task\" onclick=\"new_exercise()\"> Добавить тренировку </button></div></div>";
+    var gotovo = "<div class=\"block-train\"><div class=\"make-train\"> <button id=\"add-task\" class=\"train_button\" onclick=\"new_exercise()\"> Добавить тренировку </button> <br> <button id=\"random_train\" class=\"train_button\" onclick = \"makeRandomTrain()\" >Рандомная тренировка</button> </div> </div>";
     document.getElementById('trains').innerHTML += gotovo;
     //var gotovo = "<button id=\"new-train\" onclick=\"new_train()\">Добавить тренировку</button>";
     //document.getElementById('tasks').innerHTML += gotovo;
@@ -54,6 +54,13 @@ const makeTrainActive = (obj) =>{
     const train_id = obj.id.slice(12, obj.id.length)
     localStorage.train_id = train_id;
     console.log(localStorage.train_id)
+    window.location.href = 'exercise.html';
+}
+
+const randomButton = document.querySelector('#random_train')
+
+makeRandomTrain = () => {
+    localStorage.train_id = - 1;
     window.location.href = 'exercise.html';
 }
 

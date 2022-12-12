@@ -14,9 +14,10 @@
     padding: 10px;
 }
 
-#add-task{
+.train_button{
     border: 2px solid whitesmoke;
     line-height: 150%;
+    width: 300px;
     font-style: sans-serif;
     font-weight: bold;
     padding: 10px;
@@ -54,10 +55,15 @@
 }
 
 .make-train{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     font-size: 25px;
     text-align: center;
-    margin-top: 30%;
+    /* margin-top: 30%; */
+    
 }
 
 .block-train a {
