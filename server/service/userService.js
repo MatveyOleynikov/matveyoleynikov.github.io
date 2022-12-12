@@ -124,6 +124,30 @@ class UserService {
         console.log(User);
         return user
     }
+
+    async changePassword(user_id, password){
+        console.log("Service changePassword")
+        console.log(user_id)
+        await User.update(
+            {
+                password: password,
+            },
+            {
+              where: {
+                user_id: [Number(user_id)],
+              },
+            }
+        )
+        const user = await User.findOne({
+            where: {
+                user_id: [Number(user_id)]
+            }
+        }
+        )
+        console.log(user)
+        console.log(User);
+        return user
+    }
 }
 
 

@@ -69,6 +69,17 @@ class UserController{
         const user = await UserService.changeLogin(user_id, login);
         res.json(user)
     }
+
+    async changePassword(req, res){
+        console.log(req);
+        const user_id = req.query.id
+        const password = req.query.password
+        console.log("changeLogin");
+        console.log(user_id);
+        console.log(password);
+        const user = await UserService.changePassword(user_id, password);
+        res.json(user)
+    }
 }
 
 module.exports = new UserController();
