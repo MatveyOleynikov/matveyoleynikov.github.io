@@ -12,6 +12,10 @@
     height: 110px;
     background: #83A7C9;
     border-radius: 50%;
+    background-image: url("./images/avatar.jpg");
+    background-position:50% 50%;
+    background-repeat:no-repeat;    
+    background-size:cover
 }
 
 .rectangle-block{
