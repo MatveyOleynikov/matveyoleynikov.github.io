@@ -18,7 +18,7 @@ const makeTimer = () => {
 
 const fillExercise = (exercise) => {
 
-    console.log(exercise.exercise_id)
+    console.log(exercise.exercise_id    )
     const timer = document.querySelector(".timer-exercise");
     timer.textContent = exercise.time;
 
@@ -71,6 +71,7 @@ const findAllExerciseByTrainId = async () => {
         })
 
         exercises = await response.json();
+        exercises = shuffle(exercises)
         console.log(exercises)
     }
 
@@ -97,10 +98,21 @@ const makeRandomTrain = () => {
         exercises.push(x);
     }
 
-    // console.log(exercises);
     return exercises;
 }
 
+const shuffle = (arr) =>{
+
+    let j, temp;
+	for(let i = arr.length - 1; i > 0; i--){
+		j = Math.floor(Math.random()*(i + 1));
+		temp = arr[j];
+		arr[j] = arr[i];
+		arr[i] = temp;
+	}
+
+	return arr;
+}
 
 const switchExercise = (exercises) => {
 
