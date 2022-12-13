@@ -1,3 +1,4 @@
+// const { json } = require("body-parser");
 
 
 const url = 'http://localhost:4000/api/exercises/';
@@ -17,6 +18,7 @@ const makeTimer = () => {
 
 const fillExercise = (exercise) => {
 
+    console.log(exercise.exercise_id)
     const timer = document.querySelector(".timer-exercise");
     timer.textContent = exercise.time;
 
@@ -55,7 +57,21 @@ const findAllExerciseByTrainId = async () => {
 
     else {
         console.log("ffff")
-        exercisesId = makeRandomTrain()
+        const exercisesIdList = makeRandomTrain()
+        const urlWithId = 'http://localhost:4000/api/exercises/exercisesById'
+        console.log("tititittii")
+        console.log(exercisesIdList)
+        const response = await fetch(urlWithId, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+              },
+ 
+            body : JSON.stringify(exercisesIdList)
+        })
+
+        exercises = await response.json();
+        console.log(exercises)
     }
 
     return exercises;
@@ -81,7 +97,7 @@ const makeRandomTrain = () => {
         exercises.push(x);
     }
 
-    console.log(exercises);
+    // console.log(exercises);
     return exercises;
 }
 

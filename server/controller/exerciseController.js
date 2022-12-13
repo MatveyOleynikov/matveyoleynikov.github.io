@@ -52,7 +52,9 @@ class ExerciseController{
     async getAllExercisesByExerciseId(req, res){
 
         try{
-        const exercisesIdList = req.body.exercisesIdList
+        console.log(req.body)
+        const exercisesIdList = req.body
+        console.log(exercisesIdList)
         const exercises = await exerciseService.getExercisesByExercisesId(exercisesIdList);
         res.json(exercises)
         }
