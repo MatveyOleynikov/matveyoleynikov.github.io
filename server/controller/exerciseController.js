@@ -48,6 +48,19 @@ class ExerciseController{
         }
         
     }
+
+    async getAllExercisesByExerciseId(req, res){
+
+        try{
+        const exercisesIdList = req.body.exercisesIdList
+        const exercises = await exerciseService.getExercisesByExercisesId(exercisesIdList);
+        res.json(exercises)
+        }
+        catch(e){
+            res.status(400).json(e.message);
+        }
+
+    }   
     
 }
 
